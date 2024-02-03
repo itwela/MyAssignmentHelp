@@ -11,7 +11,6 @@ import { Form } from "./components/form";
 import bgimage from './assets/bgimage.jpg'
 import { useRef, RefObject, useEffect } from 'react';
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react"; 
 
 function App() {
 

@@ -1,6 +1,25 @@
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react"; 
+import { useRef } from 'react';
+
+
+
+
 export const Header = () => {
+
+  const fadeTopOne = useRef(null);
+
+  useGSAP(() => {
+    gsap.from(fadeTopOne.current, {
+        y: -100, // Starting position (above the screen)
+        opacity: 0, // Starting opacity (completely transparent)
+        duration: 2.618, // Duration of the animation
+        ease: "sine.out", // Easing function for smoother animation
+    })
+  })
+
   return (
-    <header className="p-5 fixed w-full md:flex justify-center gap-10 items-center z-[2]">
+    <header ref={fadeTopOne} className="p-5 fixed w-full md:flex justify-center gap-10 items-center z-[2]">
       <img src="https://cdn1.myassignmenthelp.com/seo-revamp-assets/logo-icon.svg" alt="" className="logo" />
       
       {/* Navigation Sections */}
