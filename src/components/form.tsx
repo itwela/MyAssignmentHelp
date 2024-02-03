@@ -1,14 +1,45 @@
 import React, { useState } from "react";
+import { useForm, SubmitHandler } from "react-hook-form"
+
+type Inputs = {
+  example: string
+  exampleRequired: string
+}
 
 export const Form = () => {
-    const [showTooltip, setShowTooltip] = useState(false);
+    // const [showTooltip, setShowTooltip] = useState(false);
         
-    const toggleTooltip = () => {
-      setShowTooltip(!showTooltip);
-    };
+    // const toggleTooltip = () => {
+    //   setShowTooltip(!showTooltip);
+    // };
+
+    const {
+      register,
+      handleSubmit,
+      watch,
+      formState: { errors },
+    } = useForm<Inputs>()
+    const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
+  
+    console.log(watch("example")) // watch input value by passing the name of it
+
     return (
     <>
-      <div className="form-wrapper flex flex-col gap-8">
+
+    <form className="w-[100%] p-4 flex flex-col gap-4 items-center" onSubmit={handleSubmit(onSubmit)}>
+      {/* register your input into the hook by invoking the "register" function */}
+      <input className="test w-[80%]" {...register("example")} />
+
+      {/* include validation with required or other standard HTML validation rules */}
+      <input className="test w-[80%]" {...register("exampleRequired", { required: true })} />
+      {/* errors will return when field validation fails  */}
+      {errors.exampleRequired && <span>This field is required</span>}
+
+      <input className="w-[10em] p-2 rounded-[0.5em]" type="submit" />
+      </form>
+
+
+      {/* <div className="form-wrapper flex flex-col gap-8">
       <section className="w-[100%] flex flex-col rounded-[1.5em] gap-3 p-4">
       <p className="text-center">
         It’s time you sought help from 
@@ -51,7 +82,6 @@ export const Form = () => {
                 <img src="https://cdn1.myassignmenthelp.com/seo-revamp-assets/Info.svg" alt="question" width="20" height="20" className="question loading" title="Info" data-was-processed="true" onClick={toggleTooltip} />
               </div>
               
-            {/*START --- EXTRA INFO ------ */}
             {showTooltip && (
                 <div className="assignment-type-info-tooltip">
                     <p>
@@ -66,10 +96,8 @@ export const Form = () => {
                 </div>
             )}
             </div>
-            {/*end --- EXTRA INFO ------ */}    
 
 
-            {/*START ----- ENTRTIES ------ */}
 
             <div className="flex flex-col md:flex-row gap-3 w-[100%] justify-evenly">
 
@@ -121,7 +149,6 @@ export const Form = () => {
 
               
             </div>
-            {/*START ---- SUBMIT BUTTON ----- */}
 
               <button
                 type="submit"
@@ -132,12 +159,11 @@ export const Form = () => {
                   Submit Now
               </button>
               
-             {/*END ----- SUVMIY BUTTON END ------ */}
 
           </form>
         </div>
       </section>
-      </div>
+      </div> */}
     </>
   );
 };

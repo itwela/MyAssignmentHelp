@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import Marquee from "react-fast-marquee";
 
 export const Stats = () => {
   const statRef1 = useRef(null);
@@ -61,6 +62,22 @@ const animateValueFraction = (start: number, end: number, duration: number, ref:
           <span className='text-[0.6em] md:text-[1.2em]'>CLIENT RATING </span>
         </div>
       </section>
+
+
+
+      <Marquee>
+        <div className='flex gap-10'>
+          <div>🗹 100+ Students Support Executive to Listen Students Requirement</div>
+          <div>🗹 Global Assignment Helper</div>
+          <div>🗹 Best Assignment Writer</div>
+          <div>🗹 Highest Grade for All Academic Needs</div>
+          <div>🗹 1M+ Satisfied Students</div>
+          <div>🗹 5,267 Academic Assignment Writers</div>
+          <div>🗹 10+ Years Of Experience in Academic Writing</div>
+          <div>🗹 Assignment Help</div>
+          <div>🗹 Round the Clock Support Service</div>
+        </div>
+      </Marquee>
     </>
   );
 };
