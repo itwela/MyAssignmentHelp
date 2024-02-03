@@ -45,6 +45,14 @@ button, .form-button {
     cursor: pointer;
 }
 
+.form{
+    outline: #fff solid 3px;
+}
+
+.dark-mode-form {
+    outline: #303754 solid 3px;
+}
+
 .form-control {
     width: 100%;
 }

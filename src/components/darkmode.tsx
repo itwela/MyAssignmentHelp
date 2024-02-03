@@ -40,6 +40,11 @@ const DarkMode: React.FC = () => {
     if (footer) {
       footer.classList.toggle('dark-mode-footer', isDarkMode);
     }
+    // Toggle classes on forms if it exists
+    const form = document.querySelector('form');
+    if (form) {
+      form.classList.toggle('dark-mode-form', isDarkMode);
+    }
     // Toggle classes on sections
     const sections = document.querySelectorAll('section');
     sections.forEach((section) => {
@@ -50,7 +55,7 @@ const DarkMode: React.FC = () => {
     inputF.forEach((inputF) => {
       inputF.classList.toggle('dark-mode-input', isDarkMode);
     });
-    // Toggle classes on input fields
+    // Toggle classes on text area
     const textarea = document.querySelectorAll('textarea');
     textarea.forEach((textarea) => {
       textarea.classList.toggle('dark-mode-textarea', isDarkMode);
