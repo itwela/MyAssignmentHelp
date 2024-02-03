@@ -49,6 +49,10 @@ button, .form-button {
     outline: #fff solid 3px;
 }
 
+input {
+    border-radius: 0.3em;
+} 
+
 .dark-mode-form {
     outline: #303754 solid 3px;
 }

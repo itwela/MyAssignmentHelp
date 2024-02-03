@@ -9,13 +9,65 @@ import { RowAHF } from "./components/row_3_ahf";
 import { Testimonials } from "./components/row_4_testimonials";
 import { Form } from "./components/form";
 import bgimage from './assets/bgimage.jpg'
+import { useRef, RefObject, useEffect } from 'react';
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react"; 
 
 function App() {
+
+  const mainRef: RefObject<HTMLMapElement> = useRef(null);
+
+  // scroll behavior fix
+  useEffect(() => {
+    // Save the current scroll position
+    const scrollY = window.scrollY;
+    
+    // Disable scroll restoration
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+  
+    // Restore the scroll position after the page has reloaded
+    window.scrollTo(0, scrollY);
+  
+    // Clean up
+    return () => {
+      // Re-enable scroll restoration when the component unmounts
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'auto';
+      }
+    };
+  }, []);
+  
+
+  // gsap -------
+  useEffect(() => {
+    if (mainRef.current) {
+      const children = gsap.utils.toArray(mainRef.current.children);
+      gsap.from(children, {
+        y: -100,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        stagger: 0.618, // Adjust the stagger value as needed
+      });
+      gsap.to(children, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        stagger: 0.618, // Adjust the stagger value as needed
+      });
+    }
+  }, []);
+  
+  
+  
 
   return (
     <div>
       <Header />
-      <main className="p-4 flex flex-col place-content-center place-items-center ">
+      <main ref={mainRef} className="p-4 flex flex-col place-content-center place-items-center ">
 
       <div id="bug"  className="flex flex-col place-content-center place-items-center w-[100%] pt-[7em] pb-[3em]" >
         <div className="title-wrapper text-2xl text-center pb-4">
