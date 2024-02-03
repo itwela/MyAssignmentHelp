@@ -8,7 +8,7 @@ export const Footer =  () => {
             
             <div className="flex gap-4 justify-around md:w-[50%]">
             <ul className="get-to-know text-[0.6em] flex flex-col  gap-4"> 
-            <h3 className="font-black">Get to know us</h3>             
+            <h3 className="font-black text-[1.3em]">Get to know us</h3>             
               <li className="blog">Blog</li>
               <li className="blog">Faqs</li>
               <li className="blog">How it works</li>
@@ -19,7 +19,7 @@ export const Footer =  () => {
             </ul>
 
             <ul className="best-in-c text-[0.6em] flex flex-col gap-4">
-            <h3 className="font-black">Best in Countries</h3>
+            <h3 className="font-black text-[1.3em]">Best in Countries</h3>
                 <li className="countries">American</li>
                 <li className="countries">Asia Pacific</li>
                 <li className="countries">Europe</li>
@@ -31,7 +31,7 @@ export const Footer =  () => {
             <div className="flex gap-4 justify-around md:w-[50%]">
             
             <ul className="fat text-[0.6em] flex flex-col gap-4">
-            <h3 className="font-black">Free Academic Tools</h3>             
+            <h3 className="font-black text-[1.3em]">Free Academic Tools</h3>             
              <li>Essay Grader</li>
               <li>Essay Typer</li>
               <li>Essay Checker</li>
@@ -43,7 +43,7 @@ export const Footer =  () => {
               <li>All Free Tools</li>
             </ul>
             <ul className="citation-tools text-[0.6em] flex flex-col  justify-evenly gap-4">
-            <h3 className="font-black">Citation Tools</h3>             
+            <h3 className="font-black text-[1.3em]">Citation Tools</h3>             
               <li>APA Citation</li>
               <li>Chicago Citation</li>
               <li>Harvard Citation</li>

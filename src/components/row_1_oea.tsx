@@ -18,7 +18,7 @@ export const RowOEA = () => {
               className="dark-div rounded-[1.5em] min-w-[90%] md:min-w-[45%] h-[20em] md:h-[35em] p-4 flex flex-col justify-evenly"
             >
               <div className="image-container w-[100%] h-[40%] flex place-content-center place-items-center">
-               <img src={item.image} alt={item.title} className='' />
+               <img src={item.image} alt={item.title} className='w-[150px]' />
               </div>
               <p className='font-black md:text-[1.5em]'>{item.title} </p>
               <div className="desc-container w-[100%] h-[25%] flex place-items-center place-content-center text-[0.7em] md:text-[1em]">
