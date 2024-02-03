@@ -1,17 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import lightModeIcon from '../assets/night-mode-light.png';
 import darkModeIcon from '../assets/night-mode-dark.png';
 
 const DarkMode: React.FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  // Initialize dark mode state from localStorage, defaulting to false if not found
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+    const storedDarkMode = localStorage.getItem('isDarkMode');
+    return storedDarkMode ? JSON.parse(storedDarkMode) : false;
+  });
 
   const handleDarkModeToggle = () => {
     // Toggle the dark mode state
-    setIsDarkMode((prevMode) => !prevMode);
+    setIsDarkMode((prevMode: boolean) => !prevMode);
   };
 
+  // Use useEffect to update localStorage when isDarkMode changes
+  useEffect(() => {
+    localStorage.setItem('isDarkMode', JSON.stringify(isDarkMode));
+  }, [isDarkMode]);
+
   // Use useEffect to toggle classes based on the updated state
-  React.useEffect(() => {
+  useEffect(() => {
     // Toggle classes on HTML body
     document.body.classList.toggle('dark-mode-body', isDarkMode);
     // Toggle classes on header if it exists
@@ -34,7 +43,7 @@ const DarkMode: React.FC = () => {
     // Toggle classes on sections
     const sections = document.querySelectorAll('section');
     sections.forEach((section) => {
-        section.classList.toggle('dark-mode-section', isDarkMode);
+      section.classList.toggle('dark-mode-section', isDarkMode);
     });
   }, [isDarkMode]); // Run this effect whenever isDarkMode changes
 

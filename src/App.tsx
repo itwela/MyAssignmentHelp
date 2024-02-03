@@ -9,6 +9,7 @@ import { RowOEA } from "./components/row_1_oea";
 import { RowAHS } from "./components/row_2_ahs";
 import { RowAHF } from "./components/row_3_ahf";
 import { Testimonials } from "./components/row_4_testimonials";
+import { Form } from "./components/form";
 
 function App({ product, user }: { product: Product; user: User }) {
   const [cart, addToCart] = useCart();
@@ -17,7 +18,7 @@ function App({ product, user }: { product: Product; user: User }) {
     <div>
       <Header cart={cart} user={user} />
 
-      <main className="grid place-items-center grid-cols-1 grid-rows-auto gap-5 text-[#] p-4">
+      <main className="p-4 flex flex-col place-content-center place-items-center pt-[7em]">
         <div className="title-wrapper text-2xl text-center">
           <h1 className="title-text flex flex-col gap-3 place-items-center">
             <span className="text-[1.3em] font-black">Assignment Help</span>
@@ -26,16 +27,21 @@ function App({ product, user }: { product: Product; user: User }) {
             </span> 
           </h1>
         </div>
-        <Stats/>
-        <button className="p-4 rounded-[1em]">
-            Hire an Expert
-        </button>
-        <div className="scrollers-home flex flex-col gap-8 w-[100%]">
-        <RowOEA/>
-        <RowAHS/>
-        <RowAHF/>
-        <Testimonials/>
-        </div>
+        <div className="main-content grid place-items-center grid-cols-1 grid-rows-auto gap-5 w-[90%] md:w-[80%]">
+          <Stats/>
+          <button className="p-4 rounded-[1em]">
+              Hire an Expert
+          </button>
+          <div className="scrollers-home flex flex-col gap-8 w-[100%]">
+          <RowOEA/>
+          <RowAHS/>
+          <RowAHF/>
+          <Testimonials/>
+          <div className="form-container">
+          <Form/>
+          </div>
+          </div>
+          </div>
       </main>
 
       <Footer/>

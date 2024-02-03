@@ -11,9 +11,9 @@ export const RowAHF = () => {
 
     <div className="row-1-wrapper w-[100%]">
       <div className="row-1-cont flex gap-4 place-items-start">
-        <div className="dark-div rounded-[1.5em] min-w-[90%] md:min-w-[60%]  h-[15em]"></div>
-        <div className="dark-div rounded-[1.5em] min-w-[90%] md:min-w-[60%]  h-[15em]"></div>
-        <div className="dark-div rounded-[1.5em] min-w-[90%] md:min-w-[60%] h-[15em]"></div>
+         <div className="dark-div rounded-[1.5em] min-w-[90%] md:min-w-[45%] h-[15em] md:h-[22em]"></div>
+        <div className="dark-div rounded-[1.5em] min-w-[90%] md:min-w-[45%] h-[15em] md:h-[22em]"></div>
+        <div className="dark-div rounded-[1.5em] min-w-[90%] md:min-w-[45%] h-[15em] md:h-[22em]"></div>
       </div>
     </div>
     </>
