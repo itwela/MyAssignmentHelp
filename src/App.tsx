@@ -2,7 +2,7 @@ import { Header } from "./components/header";
 import { Images } from "./components/images";
 import { ProductInfo } from "./components/product-info";
 import { useCart } from "./hooks";
-import { Stats } from "./stats";
+import { Stats } from "./components/stats";
 import type { Product, User } from "./types";
 
 function App({ product, user }: { product: Product; user: User }) {
@@ -13,18 +13,21 @@ function App({ product, user }: { product: Product; user: User }) {
       <Header cart={cart} user={user} />
 
       <main className="grid place-items-center grid-cols-1 grid-rows-auto gap-5 text-[#] p-4">
-        <section className="title-wrapper text-2xl text-center">
+        <div className="title-wrapper text-2xl text-center">
           <h1 className="title-text flex flex-col place-items-center">
             Assignment Help
             <span> Get Assignment Help From World's
                No.1 Assignment Help Company
             </span> 
           </h1>
-        </section>
+        </div>
         <Stats/>
+        <button className="p-4 rounded-[1em]">
+            Hire an Expert
+        </button>
       </main>
 
-      <footer className="text-center text-sm p-5 text-[#282e3e]">
+      <footer className="text-center text-sm p-5">
         Made with ♥ in&nbsp;
         <a href="https://codux.com">Codux</a>
         &nbsp;with&nbsp;

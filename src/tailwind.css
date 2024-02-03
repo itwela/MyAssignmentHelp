@@ -9,3 +9,16 @@ html {
 header, section {
     background-color: #fff;
 }
+
+.dark-mode-header, .dark-mode-body, .dark-mode-footer {
+    background-color: #0a082a;
+    color: white;
+}
+
+.dark-mode-section {
+    background-color: #303754;
+}
+
+button {
+    background-color: #ee8038;
+}
