@@ -13,8 +13,8 @@ html {
 
 #bug{
     background-image: url('https://cdn1.myassignmenthelp.com/new-images/new-banners/home-page-new-banner.jpg') !important;
-    background-blend-mode:difference ;
-    background-color: #323232;
+    background-blend-mode:multiply ;
+    background-color: #a3a3a3;
 }
 
 header, section, .dark-div {
