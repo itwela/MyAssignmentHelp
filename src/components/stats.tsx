@@ -41,9 +41,9 @@ const animateValueFraction = (start: number, end: number, duration: number, ref:
   
 
   useEffect(() => {
-    animateValueFraction(0, 2269529, 2000, statRef1);
-    animateValueFraction(0, 5267, 2000, statRef2);
-    animateValue(0, 4.9, 2000, statRef3);
+    animateValueFraction(0, 2269529, 2618, statRef1);
+    animateValueFraction(0, 5267, 2618, statRef2);
+    animateValue(0, 4.9, 2618, statRef3);
   }, []);
 
   return (
@@ -66,7 +66,7 @@ const animateValueFraction = (start: number, end: number, duration: number, ref:
 
 
       <Marquee>
-        <div className='flex gap-10'>
+        <div className='flex gap-10 text-white'>
           <div>🗹 100+ Students Support Executive to Listen Students Requirement</div>
           <div>🗹 Global Assignment Helper</div>
           <div>🗹 Best Assignment Writer</div>

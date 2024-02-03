@@ -35,7 +35,7 @@ export const Form = () => {
       {/* errors will return when field validation fails  */}
       {errors.exampleRequired && <span>This field is required</span>}
 
-      <input className="w-[10em] p-2 rounded-[0.5em]" type="submit" />
+      <input className="form-button w-[10em] p-2 rounded-[0.5em]" type="submit" />
       </form>
 
 

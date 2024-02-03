@@ -39,9 +39,10 @@ header, section, .dark-div {
     color: #fff;
 }
 
-button {
+button, .form-button {
     background-color: #ee8038;
     color: #fff;
+    cursor: pointer;
 }
 
 .form-control {
