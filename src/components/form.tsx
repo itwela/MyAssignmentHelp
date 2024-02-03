@@ -4,18 +4,18 @@ export const Form = () => {
   return (
     <>
       <div className="form-wrapper flex flex-col gap-8">
+      <section className="w-[100%] flex flex-col rounded-[1.5em] gap-3 p-4">
       <p className="text-center flex flex-col ">
         It’s time you sought help from
         <span>MyAssignmentHelp.com Experts</span>
       </p>
-      <section className="w-[100%] flex flex-col rounded-[1.5em] gap-3">
         <div className="__form-container flex flex-col place-items-center place-content-center gap-4">
           <form
             id="bannerformgoogle"
             method="post"
             autoComplete="off"
             action="https://myassignmenthelp.com/Home/"
-            className="__Form mt-3"
+            className="flex flex-col gap-4 place-items-center"
             noValidate
           >
             <input type="hidden" value="136.55.56.166" id="ip" name="ip" data-fillr-id="378545248" />
@@ -43,9 +43,12 @@ export const Form = () => {
                 <label className="btn btn-outline-primary rounded-right">
                   <input type="radio" name="options" value="MzkwMzA3Ny10NFcyLTE3MTI5MzE=" id="Editing" data-fillr-id="992896134" data-fillr="bound" autoComplete="off" /> Editing
                 </label>
-              </div>
-              <div className="assignment-type-info-wrapper">
                 <img src="https://cdn1.myassignmenthelp.com/seo-revamp-assets/Info.svg" alt="question" width="20" height="20" className="question loading" title="Info" data-was-processed="true" />
+              </div>
+              
+            {/*START --- EXTRA INFO ------ */}
+
+              <div className="assignment-type-info-wrapper">
                 <div className="assignment-type-info-tooltip">
                   <p>
                     <strong>Writing:</strong> Get your essay and assignment written from scratch by PhD expert
@@ -58,12 +61,15 @@ export const Form = () => {
                   </p>
                 </div>
               </div>
+
+            {/*end --- EXTRA INFO ------ */}    
+
             </div>
 
 
             {/*START ----- ENTRTIES ------ */}
 
-            <div className="dark-div">
+            <div className="dark-div flex flex-col gap-4">
               <div className="dark-div col-12 col-md-6 pr-md-1">
                 <div className="__input-box auto-signin">
                   <input type="email" name="Email" id="Email" className="form-control" placeholder="Email*" data-fillr-id="538746389" />
@@ -86,23 +92,27 @@ export const Form = () => {
               </div>
               <div className="col-12">
 
+            
              {/*END ----- ENTRTIES ------ */}
 
+                
+              </div>
 
-             {/*START ---- SUBMIT BUTTON ----- */}
+              
+            </div>
+            {/*START ---- SUBMIT BUTTON ----- */}
 
               <button
-                  type="submit"
-                  name="submit"
-                  id="submit"
-                  className="__btn btn btn-primary w-100 mb-3"
+                type="submit"
+                name="submit"
+                id="submit"
+                className="bg-[#ee8038] mb-3 p-4 rounded-[1em] w-[10em]"
                 >
                   Submit Now
               </button>
               
              {/*END ----- SUVMIY BUTTON END ------ */}
-              </div>
-            </div>
+
           </form>
         </div>
       </section>
