@@ -1,11 +1,11 @@
 import React from 'react';
 
-export const RowOEA = () => {
+export const RowAHS = () => {
   return (
     <>
     <div className="row-1-title-cont w-[100%] font-black">
       <h2 className='row-1-title text-[1em] md:text-[1.3em]'>
-          Online Education Assistance
+      Assignment Help Services
       </h2>
     </div>
 

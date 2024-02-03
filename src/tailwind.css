@@ -11,8 +11,16 @@ html {
     overflow-x: hidden;
 }
 
+body {
+}
+
+
 header, section, .dark-div {
     background-color: #fff;
+}
+
+.row-1-cont{
+    overflow-x: scroll !important;
 }
 
 .dark-mode-header, .dark-mode-body, .dark-mode-footer {
