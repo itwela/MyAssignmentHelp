@@ -11,9 +11,11 @@ html {
     overflow-x: hidden;
 }
 
-body {
+#bug{
+    background-image: url('https://cdn1.myassignmenthelp.com/new-images/new-banners/home-page-new-banner.jpg') !important;
+    background-blend-mode:difference ;
+    background-color: #323232;
 }
-
 
 header, section, .dark-div {
     background-color: #fff;
@@ -23,12 +25,16 @@ header, section, .dark-div {
     overflow-x: scroll !important;
 }
 
+.title-wrapper{
+    color: #fff;
+}
+
 .dark-mode-header, .dark-mode-body, .dark-mode-footer {
     background-color: #0a082a;
     color: white;
 }
 
-.dark-mode-section, .dark-mode-div {
+.dark-mode-section, .dark-mode-div, .dark-mode-input, .dark-mode-textarea {
     background-color: #303754;
     color: #fff;
 }
@@ -36,4 +42,8 @@ header, section, .dark-div {
 button {
     background-color: #ee8038;
     color: #fff;
+}
+
+.form-control {
+    width: 100%;
 }

@@ -45,12 +45,22 @@ const DarkMode: React.FC = () => {
     sections.forEach((section) => {
       section.classList.toggle('dark-mode-section', isDarkMode);
     });
+    // Toggle classes on input fields
+    const inputF = document.querySelectorAll('input');
+    inputF.forEach((inputF) => {
+      inputF.classList.toggle('dark-mode-input', isDarkMode);
+    });
+    // Toggle classes on input fields
+    const textarea = document.querySelectorAll('textarea');
+    textarea.forEach((textarea) => {
+      textarea.classList.toggle('dark-mode-textarea', isDarkMode);
+    });
   }, [isDarkMode]); // Run this effect whenever isDarkMode changes
 
   return (
     <img
       id="darkModeToggle"
-      className='dark-icon md:w-[40px] w-[20px]'
+      className='dark-icon w-[40px] '
       src={isDarkMode ? lightModeIcon : darkModeIcon}
       onClick={handleDarkModeToggle}
     />

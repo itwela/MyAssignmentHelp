@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const Form = () => {
-  return (
+    const [showTooltip, setShowTooltip] = useState(false);
+        
+    const toggleTooltip = () => {
+      setShowTooltip(!showTooltip);
+    };
+    return (
     <>
       <div className="form-wrapper flex flex-col gap-8">
       <section className="w-[100%] flex flex-col rounded-[1.5em] gap-3 p-4">
-      <p className="text-center flex flex-col ">
-        It’s time you sought help from
-        <span>MyAssignmentHelp.com Experts</span>
+      <p className="text-center">
+        It’s time you sought help from 
+        <span> MyAssignmentHelp.com experts</span>
       </p>
-        <div className="__form-container flex flex-col place-items-center place-content-center gap-4">
+        <div className="__form-container flex flex-col place-items-center place-content-center gap-4 p-4">
           <form
             id="bannerformgoogle"
             method="post"
@@ -43,33 +48,55 @@ export const Form = () => {
                 <label className="btn btn-outline-primary rounded-right">
                   <input type="radio" name="options" value="MzkwMzA3Ny10NFcyLTE3MTI5MzE=" id="Editing" data-fillr-id="992896134" data-fillr="bound" autoComplete="off" /> Editing
                 </label>
-                <img src="https://cdn1.myassignmenthelp.com/seo-revamp-assets/Info.svg" alt="question" width="20" height="20" className="question loading" title="Info" data-was-processed="true" />
+                <img src="https://cdn1.myassignmenthelp.com/seo-revamp-assets/Info.svg" alt="question" width="20" height="20" className="question loading" title="Info" data-was-processed="true" onClick={toggleTooltip} />
               </div>
               
             {/*START --- EXTRA INFO ------ */}
-
-              <div className="assignment-type-info-wrapper">
+            {showTooltip && (
                 <div className="assignment-type-info-tooltip">
-                  <p>
+                    <p>
                     <strong>Writing:</strong> Get your essay and assignment written from scratch by PhD expert
-                  </p>
-                  <p>
+                    </p>
+                    <p>
                     <strong>Rewriting:</strong> Paraphrase or rewrite your friend's essay with similar meaning at reduced cost
-                  </p>
-                  <p>
+                    </p>
+                    <p>
                     <strong>Editing:</strong> Proofread your work by experts and improve grade at Lowest cost
-                  </p>
+                    </p>
                 </div>
-              </div>
-
-            {/*end --- EXTRA INFO ------ */}    
-
+            )}
             </div>
+            {/*end --- EXTRA INFO ------ */}    
 
 
             {/*START ----- ENTRTIES ------ */}
 
-            <div className="dark-div flex flex-col gap-4">
+            <div className="flex flex-col md:flex-row gap-3 w-[100%] justify-evenly">
+
+              <div className="left-entries flex flex-col gap-4">
+              <div className="dark-div">
+                <div className="__input-box auto-signin">
+                  <input type="email" name="Email" id="Email" className="form-control" placeholder="Email*" data-fillr-id="538746389" />
+                </div>
+              </div>
+              <div className="dark-div">
+                <div className="__input-box">
+                  <input type="text" name="Name" id="Name" className="form-control" placeholder="Name*" data-fillr-id="2006230211" />
+                </div>
+              </div>
+              <div className="dark-div col-12">
+                <div className="__input-box">
+                  <input type="text" name="Topic" id="Topic" className="form-control" placeholder="Essay Topic*" data-fillr-id="2099291191" />
+                </div>
+              </div>
+              <div className="dark-div col-12">
+                <div className="__input-box">
+                  <textarea name="Requirements" id="Requirements" className="form-control" placeholder="Requirements*" data-fillr-id="832237785"></textarea>
+                </div>
+              </div>
+              </div>
+
+              <div className="left-entries flex flex-col gap-4">
               <div className="dark-div col-12 col-md-6 pr-md-1">
                 <div className="__input-box auto-signin">
                   <input type="email" name="Email" id="Email" className="form-control" placeholder="Email*" data-fillr-id="538746389" />
@@ -90,12 +117,6 @@ export const Form = () => {
                   <textarea name="Requirements" id="Requirements" className="form-control" placeholder="Requirements*" data-fillr-id="832237785"></textarea>
                 </div>
               </div>
-              <div className="col-12">
-
-            
-             {/*END ----- ENTRTIES ------ */}
-
-                
               </div>
 
               
