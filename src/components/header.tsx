@@ -5,10 +5,8 @@ import { CartDetails, UserDetails } from "./details";
 
 export const Header = ({ cart, user }: { cart: Cart; user?: User }) => {
   return (
-    <header className="bg-blue p-5 w-100 flex justify-between items-center">
-      <h1 className="text-yellow text-4xl font-bold leading-[28px]">
-        <span className="text-white">co</span>ducks
-      </h1>
+    <header className="p-5 w-100 flex justify-between items-center">
+      <img src="https://cdn1.myassignmenthelp.com/seo-revamp-assets/logo-icon.svg" alt="" className="logo" />
       <NavigationMenu.Root className="">
         <NavigationMenu.List className="flex gap-[10px] items-center justify-between text-xl">
           <NavigationMenu.Item key="about" className="">
