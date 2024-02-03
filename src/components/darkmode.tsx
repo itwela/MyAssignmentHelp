@@ -19,6 +19,13 @@ const DarkMode: React.FC = () => {
     if (header) {
       header.classList.toggle('dark-mode-header', isDarkMode);
     }
+    // Toggle classes on certain divs if it exists
+    const darkDivs = document.getElementsByClassName('dark-div');
+    if (darkDivs) {
+      for (let i = 0; i < darkDivs.length; i++) {
+        darkDivs[i].classList.toggle('dark-mode-div', isDarkMode);
+      }
+    }
     // Toggle classes on footer if it exists
     const footer = document.querySelector('footer');
     if (footer) {

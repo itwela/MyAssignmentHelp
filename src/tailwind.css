@@ -2,11 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    background-color: #f5f7fa;
+::-webkit-scrollbar{
+    display: none;
 }
 
-header, section {
+html {
+    background-color: #f5f7fa;
+    overflow-x: hidden;
+}
+
+header, section, .dark-div {
     background-color: #fff;
 }
 
@@ -15,10 +20,12 @@ header, section {
     color: white;
 }
 
-.dark-mode-section {
+.dark-mode-section, .dark-mode-div {
     background-color: #303754;
+    color: #fff;
 }
 
 button {
     background-color: #ee8038;
+    color: #fff;
 }

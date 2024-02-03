@@ -47,18 +47,18 @@ const animateValueFraction = (start: number, end: number, duration: number, ref:
 
   return (
     <>
-      <section className="wrapper p-4 relative flex gap-5 h-[12em] w-[100%] justify-items-evenly place-items-center">
+      <section className="wrapper text-center p-4 relative font-black flex gap-5 md:h-[12em] w-[100%] justify-items-evenly place-items-center text-[#64c466]">
         <div className="stat-one w-[80%] flex flex-col place-items-center">
-          <span ref={statRef1} className='text-[2em]'>0</span>
-          <span> DELIVERED ORDERS </span>
+          <span ref={statRef1} className='md:text-[2em]'>0</span>
+          <span className='text-[0.6em] md:text-[1.2em]'> DELIVERED ORDERS </span>
         </div>
-        <div className="stat-two w-[80%]  flex flex-col place-items-center">
-          <span ref={statRef2} className='text-[2em]'>0</span>
-          <span> EXPERTS </span>
+        <div className="stat-two w-[80%] flex flex-col place-items-center">
+          <span ref={statRef2} className='md:text-[2em]'>0</span>
+          <span className='text-[0.6em] md:text-[1.2em]'> EXPERTS </span>
         </div>
-        <div className="stat-three w-[80%]  flex flex-col place-items-center">
-          <span ref={statRef3} className='text-[2em]'>0</span>
-          <span>CLIENT RATING </span>
+        <div className="stat-three w-[80%] flex flex-col place-items-center">
+          <span ref={statRef3} className='md:text-[2em]'>0</span>
+          <span className='text-[0.6em] md:text-[1.2em]'>CLIENT RATING </span>
         </div>
       </section>
     </>
