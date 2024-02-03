@@ -1,15 +1,24 @@
 const rowfourdata = [
     {
+        title: '',
+        star: '',
+        quote: 'test content row 4',
         image: '',
-        description: 'test content row 4',
+        name: '',
     },  
     {
+        title: '',
+        star: '',
+        quote: 'test content row 4',
         image: '',
-        description: 'test content row 4',
+        name: '',
     }, 
     {
+        title: '',
+        star: '',
+        quote: 'test content row 4',
         image: '',
-        description: 'test content row 4',
+        name: '',
     }  
 ]
 
