@@ -76,6 +76,7 @@ const animateValueFraction = (start: number, end: number, duration: number, ref:
           <div>🗹 10+ Years Of Experience in Academic Writing</div>
           <div>🗹 Assignment Help</div>
           <div>🗹 Round the Clock Support Service</div>
+          <div className='text-transparent'>🗹</div>
         </div>
       </Marquee>
     </>
