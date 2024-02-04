@@ -26,7 +26,7 @@ export const Header = () => {
   };
 
   return (
-    <header ref={fadeTopOne} className="p-5 fixed w-full flex md:flex justify-between md:justify-center gap-10 items-center z-[2]">
+    <header ref={fadeTopOne} className="p-5 fixed w-full flex md:flex justify-between gap-10 items-center z-[2]">
       <img src="https://cdn1.myassignmenthelp.com/seo-revamp-assets/logo-icon.svg" alt="" className="logo" />
       
       {/* Navigation Sections */}
@@ -50,7 +50,7 @@ export const Header = () => {
           </div>
         </nav>
         {/* Use a CSS class to control the opacity */}
-        <div className="menu-container dark-div fixed top-[4em] left-0 w-full h-[50vh] z-50 p-5 pt-[2em] flex flex-col gap-4 opacity-0">
+        <div className="menu-container dark-div justify-evenly fixed top-[4em] left-0 w-full h-[50vh] z-50 p-5 flex flex-col gap-4 opacity-0">
           {/* Content for the white div */}
           <a href="#" className="hover:text-gray-400">Services</a>
           <a href="#" className="hover:text-gray-400">Experts</a>

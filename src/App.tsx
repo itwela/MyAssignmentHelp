@@ -60,7 +60,7 @@ function App() {
       }).from("#welcome-title", {
         opacity: 0,
         y: "+=30",
-        delay: 1.5,
+        delay: 0.5,
       }).from("#welcome-slide", {
         opacity: 100,
         xPercent: "0",
@@ -78,8 +78,9 @@ function App() {
     <div>
       <Header />
 
+      {/* into animation markup */}
       <div className="intro relative" ref={toplayer}>
-        <div id="intro-slide" className="h-[100vh]  text-[2em] md:text-[4em] p-10 bg-gray-50 justify-center md:items-center absolute top-0 left-0 z-[1000] w-full flex flex-col gap-[5em] md:gap-[4em]">
+        <div id="intro-slide" className="h-[100vh] text-[2em] text-black md:text-[4em] p-10 bg-gray-50 justify-center md:items-center absolute top-0 left-0 z-[1000] w-full flex flex-col gap-[5em] md:gap-[2em]">
           <h1 id='title-1'>Get Assignment Help...</h1>
           <h1 id='title-2'>From World's No.1...</h1>
           <h1 id='title-3'>Assignment Help Company!</h1>
@@ -88,6 +89,7 @@ function App() {
           <h1 id='welcome-title'>Welcome.</h1>
         </div>
       </div>
+      {/* intro animation markup END */}
 
       <main className="p-4 flex flex-col place-content-center place-items-center ">
 

@@ -15,13 +15,13 @@ export const RowAHS = () => {
           {rowtwodata.map((item, index) => (
             <div
             key={index}
-            className="dark-div rounded-[1.5em] min-w-[90%] md:min-w-[45%] h-[27em] md:h-[38em] p-4 flex flex-col justify-evenly pb-9"
+            className="dark-div rounded-[1.5em] min-w-[70%] md:min-w-[45%] h-[25em] p-4 flex flex-col justify-evenly"
             >
              <div className="image-container w-[100%] h-[30%] flex place-content-center place-items-center">
-               <img src={item.image} alt={item.title} className='svg-icon w-[150px] p-4' />
+               <img src={item.image} alt={item.title} className='svg-icon w-[130px] p-4' />
               </div>
               <p className='font-black md:text-[1.5em]'>{item.title} </p>
-              <div className="desc-container w-[100%] h-[25%] flex place-items-center place-content-center text-[0.7em] md:text-[1em]">
+              <div className="desc-container w-[100%] flex place-items-center overflow-scroll items-start place-content-center text-[0.7em] md:text-[1em] h-[35%]">
               <p className=''>{item.description} </p>
               </div>
           </div>
