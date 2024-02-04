@@ -79,7 +79,7 @@ const DarkMode: React.FC = () => {
   return (
     <img
       id="darkModeToggle"
-      className='dark-icon cursor-pointer w-[40px] '
+      className='dark-icon cursor-pointer w-[20px] scale-x-[-1] '
       src={isDarkMode ? lightModeIcon : darkModeIcon}
       onClick={handleDarkModeToggle}
     />

@@ -57,11 +57,6 @@ header, section, .dark-div {
     box-shadow: 2px 2px 2px #ee8038;
 }
 
-.dark-mode-div:hover {
-box-shadow: 2px 2px 2px #656e91;
-;}
-
-
 .orange-title {
     color: #ee8038;
 }

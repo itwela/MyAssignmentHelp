@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import DarkMode from "./dmprovider";
 import { useGSAP } from "@gsap/react"; 
 import { useRef } from 'react';
 import hambIcon from '../assets/hamburger.png'
@@ -37,6 +38,7 @@ export const Header = () => {
         <a href="#" className="hover:text-gray-400">About Us</a>
         <a href="#" className="hover:text-gray-400">Resources</a>
         <a href="#" className="hover:text-gray-400">Academic Tools</a>
+        <DarkMode/>
       </nav>
 
       {/* Mobile Navigation Button */}
@@ -58,6 +60,9 @@ export const Header = () => {
           <a href="#" className="hover:text-gray-400">About Us</a>
           <a href="#" className="hover:text-gray-400">Resources</a>
           <a href="#" className="hover:text-gray-400">Academic Tools</a>
+          <div className="absolute bottom-10 right-10">
+          <DarkMode/>
+          </div>
         </div>
       </div>
     </header>

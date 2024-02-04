@@ -124,8 +124,6 @@ export const Footer =  () => {
 
         </div>
 
-        <DarkMode/>
-
           <div className="terms cursor-pointer pt-6">
             <ul className="flex text-[0.5em] md:text-[0.9em] w-[100%] justify-evenly">
               <li>
