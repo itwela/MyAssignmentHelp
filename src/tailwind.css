@@ -35,8 +35,17 @@ header, section, .dark-div {
 }
 
 .dark-mode-section, .dark-mode-div, .dark-mode-input, .dark-mode-textarea {
-    background-color: #303754;
+    background-color: #303754 !important;
     color: #fff;
+    transition: 1s ease;
+}
+
+.menu-open{
+    opacity: 100%;
+}
+
+.hamburger {
+    background-image: url('./assets/hamburger.png');
 }
 
 button, .form-button {

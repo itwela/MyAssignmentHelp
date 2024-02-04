@@ -1,4 +1,6 @@
-import DarkMode from "./darkmode";
+import DarkMode from "./dmprovider";
+import lightModeIcon from '../assets/night-mode-light.png'
+import darkModeIcon from '../assets/night-mode-dark.png'
 
 
 export const Footer =  () => {
@@ -62,7 +64,8 @@ export const Footer =  () => {
   
           </div>
          <div className="dm-container">
-          <DarkMode/> 
+          {/* <DarkMode/>  */}
+          <DarkMode/>
          </div>
       </footer>
   );

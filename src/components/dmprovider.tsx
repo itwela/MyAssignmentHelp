@@ -1,4 +1,3 @@
-// darkmode
 import React, { useState, useEffect } from 'react';
 import lightModeIcon from '../assets/night-mode-light.png';
 import darkModeIcon from '../assets/night-mode-dark.png';
@@ -34,13 +33,6 @@ const DarkMode: React.FC = () => {
     if (darkDivs) {
       for (let i = 0; i < darkDivs.length; i++) {
         darkDivs[i].classList.toggle('dark-mode-div', isDarkMode);
-      }
-    }
-    // Toggle classes on certain svgs if it exists
-    const svg = document.getElementsByClassName('svg-icon');
-    if (svg) {
-      for (let i = 0; i < svg.length; i++) {
-        svg[i].classList.toggle('dark-mode-svg', isDarkMode);
       }
     }
     // Toggle classes on footer if it exists
