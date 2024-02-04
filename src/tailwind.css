@@ -40,9 +40,35 @@ header, section, .dark-div {
     transition: 0.618s ease-in-out;
 }
 
-.menu-open{
-    opacity: 100%;
+.dark-mode-header-div {
+    background-color: #303754 !important;
+    color: #fff;
     transition: 0.618s ease-in-out;
+}
+
+.header-div {
+    background: white;
+    transition: 0.618s ease-in-out;
+}
+
+.dark-div:hover {
+    transition: 0.3s ease-out;
+    transform: scale(0.98) !important;
+    box-shadow: 2px 2px 2px #ee8038;
+}
+
+.dark-mode-div:hover {
+box-shadow: 2px 2px 2px #656e91;
+;}
+
+
+.menu-container {
+    transform: translateY(-200%);
+}
+
+.menu-open{
+    transition: 0.618s ease-in-out;
+    transform: translateY(0%);
 }
 
 .hamburger {

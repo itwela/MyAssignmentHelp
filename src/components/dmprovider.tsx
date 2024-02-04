@@ -35,6 +35,13 @@ const DarkMode: React.FC = () => {
         darkDivs[i].classList.toggle('dark-mode-div', isDarkMode);
       }
     }
+    // Toggle classes on certain header div if it exists
+    const headerDiv = document.getElementsByClassName('header-div');
+    if (headerDiv) {
+      for (let i = 0; i < headerDiv.length; i++) {
+        headerDiv[i].classList.toggle('dark-mode-header-div', isDarkMode);
+      }
+    }
     // Toggle classes on certain svgs if it exists
     const svg = document.getElementsByClassName('svg-icon');
     if (svg) {

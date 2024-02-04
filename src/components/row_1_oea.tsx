@@ -20,7 +20,7 @@ export const RowOEA = () => {
               <div className="image-container w-[100%] h-[40%] flex place-content-center place-items-center">
                <img src={item.image} alt={item.title} className='svg-icon w-[140px] p-4' />
               </div>
-              <p className='font-black md:text-[1.5em]'>{item.title} </p>
+              <p className='card-title font-black md:text-[1.5em]'>{item.title} </p>
               <div className="desc-container w-[100%] flex place-items-center overflow-scroll items-start place-content-center text-[0.7em] md:text-[1em]">
               <p className=''>{item.description} </p>
               </div>

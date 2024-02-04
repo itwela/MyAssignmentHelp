@@ -50,7 +50,7 @@ export const Header = () => {
           </div>
         </nav>
         {/* Use a CSS class to control the opacity */}
-        <div className="menu-container dark-div justify-evenly fixed top-[4em] left-0 w-full h-[50vh] z-50 p-5 flex flex-col gap-4 opacity-0">
+        <div className="menu-container header-div justify-evenly fixed top-[4.8em] left-0 w-full h-[50vh] z-50 p-5 flex flex-col gap-4">
           {/* Content for the white div */}
           <a href="#" className="hover:text-gray-400">Services</a>
           <a href="#" className="hover:text-gray-400">Experts</a>
