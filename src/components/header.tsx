@@ -27,7 +27,7 @@ export const Header = () => {
 
   return (
     <header ref={fadeTopOne} className="p-5 fixed w-full flex md:flex justify-between gap-10 items-center z-[2]">
-      <img src="https://cdn1.myassignmenthelp.com/seo-revamp-assets/logo-icon.svg" alt="" className="logo" />
+      <img src="https://cdn1.myassignmenthelp.com/seo-revamp-assets/logo-icon.svg" alt="" className="logo cursor-pointer" />
       
       {/* Navigation Sections */}
       <nav className="hidden md:flex items-center space-x-4">

@@ -37,7 +37,7 @@ export const Form = () => {
       >
         {/* Add radio group for service type */}
         <div className="flex flex-col items-center gap-4">
-          <label className="text-center flex flex-col md:flex-row gap-1 text-[1.3em]">
+          <label className="its-time text-center flex flex-col md:flex-row gap-1 text-[1.3em]">
             <span>It’s time you sought help from</span>
             <span> MyAssignmentHelp.com experts!</span>
           </label>

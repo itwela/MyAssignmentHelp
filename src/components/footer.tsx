@@ -66,7 +66,7 @@ export const Footer =  () => {
 
           <div className="dm-container">
           {/* <DarkMode/>  */}
-          <DarkMode/>
+  
          </div>
 
          <div className="contact-nd-extras text-[0.6em] md:text-[1em] flex w-[100%] justify-around gap-4 pt-5">
@@ -124,6 +124,7 @@ export const Footer =  () => {
 
         </div>
 
+        <DarkMode/>
 
           <div className="terms pt-6">
             <ul className="flex text-[0.5em] md:text-[0.9em] w-[100%] justify-evenly">
