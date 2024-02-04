@@ -9,7 +9,7 @@ export const Footer =  () => {
           <div className="flex  flex-col md:flex-row gap-9 w-[100%] justify-between ">
             
             <div className="flex gap-4 justify-around md:w-[50%]">
-            <ul className="get-to-know text-[0.6em] flex flex-col  gap-4"> 
+            <ul className="get-to-know cursor-pointer text-[0.6em] flex flex-col  gap-4"> 
             <h3 className="font-black text-[1.3em]">Get to know us</h3>             
               <li className="blog">Blog</li>
               <li className="blog">Faqs</li>
@@ -20,7 +20,7 @@ export const Footer =  () => {
               <li className="blog">Our Offers</li>
             </ul>
 
-            <ul className="best-in-c text-[0.6em] flex flex-col gap-4">
+            <ul className="best-in-c cursor-pointer text-[0.6em] flex flex-col gap-4">
             <h3 className="font-black text-[1.3em]">Best in Countries</h3>
                 <li className="countries">American</li>
                 <li className="countries">Asia Pacific</li>
@@ -30,7 +30,7 @@ export const Footer =  () => {
 
             </div>
  
-            <div className="flex gap-4 justify-around md:w-[50%]">
+            <div className="flex cursor-pointer gap-4 justify-around md:w-[50%]">
             
             <ul className="fat text-[0.6em] flex flex-col gap-4">
             <h3 className="font-black text-[1.3em]">Free Academic Tools</h3>             
@@ -69,7 +69,7 @@ export const Footer =  () => {
   
          </div>
 
-         <div className="contact-nd-extras text-[0.6em] md:text-[1em] flex w-[100%] justify-around gap-4 pt-5">
+         <div className="contact-nd-extras cursor-pointer  text-[0.6em] md:text-[1em] flex w-[100%] justify-around gap-4 pt-5">
             <div className="flex flex-col gap-2">
                 <div className="pb-1 flex gap-2">
                 Contact us
@@ -126,7 +126,7 @@ export const Footer =  () => {
 
         <DarkMode/>
 
-          <div className="terms pt-6">
+          <div className="terms cursor-pointer pt-6">
             <ul className="flex text-[0.5em] md:text-[0.9em] w-[100%] justify-evenly">
               <li>
               <a href="">Term of use</a>
