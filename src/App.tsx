@@ -93,7 +93,7 @@ function App() {
       </div>
       {/* intro animation markup END */}
 
-      <main className="p-4 flex flex-col place-content-center place-items-center ">
+      <main className="flex flex-col place-content-center place-items-center ">
 
       <div id="bug"  className="flex flex-col place-content-center place-items-center w-[100%] pt-[7em] pb-[3em]" >
         <div className="title-wrapper text-2xl text-center pb-4">
@@ -112,7 +112,7 @@ function App() {
         </div>
       </div>
       
-      <div className="scrollers-home flex flex-col gap-8 w-[100%] pt-[3em]">
+      <div className="scrollers-home p-4 md:p-9 flex flex-col gap-8 w-[100%] pt-[3em]">
       <RowOEA/>
       <RowAHS/>
       <RowAHF/>
