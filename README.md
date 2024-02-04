@@ -16,3 +16,4 @@ Here is a summary of what I did:
 - Built card componenets to introduce company
 - Imported data for easy fixes if need be
 - Rebuilt Form
+- Implimented hover animations on cards
