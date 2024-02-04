@@ -43,10 +43,10 @@ export const Header = () => {
       <div className="md:hidden">
         {/* Add your mobile navigation button here */}
         <nav className=" items-center space-x-4">
-          <div className="hamburger flex flex-col leading-[0.5em]" onClick={handleMenuToggle}>
-            <span>---</span>
-            <span>---</span>
-            <span>---</span>
+          <div className="hamburger flex flex-col leading-[0.5em] pb-[1em]" onClick={handleMenuToggle}>
+            <span className="">___</span>
+            <span className="">___</span>
+            <span className="">___</span>
           </div>
         </nav>
         {/* Use a CSS class to control the opacity */}

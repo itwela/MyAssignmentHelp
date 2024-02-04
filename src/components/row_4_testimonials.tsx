@@ -16,7 +16,7 @@ export const Testimonials = () => {
       {rowfourdata.map((item, index) => (
             <div
               key={index}
-              className="dark-div justify-evenly flex flex-col gap-4 rounded-[1.5em] min-w-[90%] md:min-w-[45%] h-[24m] md:h-[26em] p-7"
+              className="dark-div justify-evenly flex flex-col gap-4 rounded-[1.5em] min-w-[90%] md:min-w-[45%] h-[24em] md:h-[26em] p-7"
             >
               <div className='flex flex-col gap-2'>
                 <h2 className="name font-black md:text-[1.5em]">{item.title}</h2>

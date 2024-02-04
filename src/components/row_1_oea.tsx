@@ -15,10 +15,10 @@ export const RowOEA = () => {
           {rowonedata.map((item, index) => (
             <div
               key={index}
-              className="dark-div rounded-[1.5em] min-w-[70%] md:min-w-[45%] h-[18em] p-4 flex flex-col justify-evenly"
+              className="dark-div rounded-[1.5em] min-w-[70%] md:min-w-[45%] h-[20em] p-4 pt-6 flex flex-col justify-evenly gap-4"
             >
               <div className="image-container w-[100%] h-[40%] flex place-content-center place-items-center">
-               <img src={item.image} alt={item.title} className='svg-icon w-[150px] p-4' />
+               <img src={item.image} alt={item.title} className='svg-icon w-[140px] p-4' />
               </div>
               <p className='font-black md:text-[1.5em]'>{item.title} </p>
               <div className="desc-container w-[100%] flex place-items-center overflow-scroll items-start place-content-center text-[0.7em] md:text-[1em]">

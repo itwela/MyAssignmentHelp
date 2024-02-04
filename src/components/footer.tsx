@@ -63,10 +63,33 @@ export const Footer =  () => {
 
   
           </div>
-         <div className="dm-container">
+
+          <div className="dm-container">
           {/* <DarkMode/>  */}
           <DarkMode/>
          </div>
+
+          <div className="terms pt-6">
+            <ul className="flex text-[0.5em] md:text-[0.6em] w-[100%] justify-evenly">
+              <li>
+              <a href="">Term of use</a>
+              </li>
+              <li className="sep">|</li>
+              <li>
+              <a href="">Privacy policy</a>
+              </li>
+              <li className="sep">|</li>
+              <li>
+              <a href="">Revision &amp; Refund policy</a>
+              </li>
+              <li className="sep">|</li>
+              <li>
+              <a href=""> Fair use policy</a>
+              </li>
+            </ul>
+          </div>
+
+  
       </footer>
   );
 };
