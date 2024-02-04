@@ -71,7 +71,7 @@ export const Form = () => {
             <span>Please select a service type</span>
           )}
         </div>
-        <div className="col-wrapper-form flex flex-col md:flex-row gap-4 items-center w-[100%]">
+        <div className="col-wrapper-form flex flex-col md:flex-row gap-4  w-[100%]">
             <div className="col-1-form flex items-center flex-col gap-4 w-[100%]">
 
 

@@ -45,6 +45,12 @@ button, .form-button {
     cursor: pointer;
 }
 
+.dark-mode-svg{
+  background-color: #fff!important; /* Set fill color to white */
+  border-radius: 1em;
+  background-blend-mode: difference;
+}
+
 .form{
     outline: #fff solid 3px;
 }
