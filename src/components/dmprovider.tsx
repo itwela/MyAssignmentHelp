@@ -35,6 +35,13 @@ const DarkMode: React.FC = () => {
         darkDivs[i].classList.toggle('dark-mode-div', isDarkMode);
       }
     }
+    // Toggle classes on certain svgs if it exists
+    const svg = document.getElementsByClassName('svg-icon');
+    if (svg) {
+      for (let i = 0; i < svg.length; i++) {
+        svg[i].classList.toggle('dark-mode-svg', isDarkMode);
+      }
+    }
     // Toggle classes on footer if it exists
     const footer = document.querySelector('footer');
     if (footer) {

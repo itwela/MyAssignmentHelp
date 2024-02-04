@@ -37,11 +37,12 @@ header, section, .dark-div {
 .dark-mode-section, .dark-mode-div, .dark-mode-input, .dark-mode-textarea {
     background-color: #303754 !important;
     color: #fff;
-    transition: 1s ease;
+    transition: 0.618s ease-in-out;
 }
 
 .menu-open{
     opacity: 100%;
+    transition: 0.618s ease-in-out;
 }
 
 .hamburger {
@@ -49,9 +50,13 @@ header, section, .dark-div {
 }
 
 button, .form-button {
-    background-color: #ee8038;
+    background-color: rgba(128, 128, 128, 0.269) !important;
     color: #fff;
     cursor: pointer;
+}
+
+button:hover, .form-button:hover{
+    background-color: #ee8038 !important;
 }
 
 .dark-mode-svg{
