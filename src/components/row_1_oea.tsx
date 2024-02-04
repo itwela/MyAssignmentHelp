@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
 import rowonedata from './row_1_data';
 
 export const RowOEA = () => {
+  
+  const handleMouseEnter = (event: MouseEvent<HTMLDivElement>) => {
+    const darkDiv = event.currentTarget;
+    const cardTitle = darkDiv.querySelector('.card-title');
+    if (cardTitle) {
+      cardTitle.classList.add('orange-title');
+    }
+  };
+
+  const handleMouseLeave = (event: MouseEvent<HTMLDivElement>) => {
+    const darkDiv = event.currentTarget;
+    const cardTitle = darkDiv.querySelector('.card-title');
+    if (cardTitle) {
+      cardTitle.classList.remove('orange-title');
+    }
+  };
+  
   return (
     <>
       <div className="row-1-title-cont w-[100%] font-black">
@@ -16,6 +33,8 @@ export const RowOEA = () => {
             <div
               key={index}
               className="dark-div rounded-[1.5em] min-w-[60%] md:min-w-[40%] h-[20em] p-4 pt-6 flex flex-col justify-evenly gap-4"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
               <div className="image-container w-[100%] h-[40%] flex place-content-center place-items-center">
                <img src={item.image} alt={item.title} className='svg-icon w-[140px] p-4' />

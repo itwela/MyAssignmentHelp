@@ -62,6 +62,10 @@ box-shadow: 2px 2px 2px #656e91;
 ;}
 
 
+.orange-title {
+    color: #ee8038;
+}
+
 .menu-container {
     transform: translateY(-200%);
 }
