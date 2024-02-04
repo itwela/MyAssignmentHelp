@@ -106,9 +106,9 @@ function App() {
         </div>
         <div className="main-content grid place-items-center grid-cols-1 grid-rows-auto gap-5 w-[90%] md:w-[80%]">
           <Stats/>
-          <button className="p-4 rounded-[1em]">
+          <a className="hire p-4 rounded-[1em] text-[white]" href="#the-form">
               Hire an Expert
-          </button>
+          </a>
         </div>
       </div>
       

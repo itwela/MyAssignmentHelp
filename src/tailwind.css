@@ -49,13 +49,13 @@ header, section, .dark-div {
     background-image: url('./assets/hamburger.png');
 }
 
-button, .form-button {
+button, .form-button, .hire {
     background-color: rgba(128, 128, 128, 0.269) !important;
     color: #fff;
     cursor: pointer;
 }
 
-button:hover, .form-button:hover{
+button:hover, .form-button:hover, .hire:hover{
     background-color: #ee8038 !important;
 }
 

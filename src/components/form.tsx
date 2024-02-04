@@ -32,7 +32,7 @@ export const Form = () => {
   return (
     <>
       <form
-        className="form w-[100%] p-4 flex flex-col gap-4 items-center rounded-[1.5em]"
+        className="form w-[100%] p-4 flex flex-col gap-10 items-center rounded-[1.5em]"
         onSubmit={handleSubmit(onSubmit)}
       >
         {/* Add radio group for service type */}
