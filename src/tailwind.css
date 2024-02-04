@@ -71,7 +71,7 @@ box-shadow: 2px 2px 2px #656e91;
 }
 
 .menu-open{
-    transition: 0.618s ease-in-out;
+    transition: 0.318s ease-in;
     transform: translateY(0%);
 }
 
