@@ -16,13 +16,13 @@ export const Testimonials = () => {
       {rowfourdata.map((item, index) => (
             <div
               key={index}
-              className="dark-div justify-evenly flex flex-col gap-4 rounded-[1.5em] min-w-[90%] md:min-w-[45%] h-[24em] md:h-[26em] p-7"
+              className="dark-div justify-evenly flex flex-col gap-4 rounded-[1.5em] min-w-[60%] md:min-w-[40%] h-[24em] md:h-[26em] p-7"
             >
               <div className='flex flex-col gap-2'>
                 <h2 className="name font-black md:text-[1.5em]">{item.title}</h2>
                 <div className="star">{item.star}</div>
               </div>
-              <p className='text-[0.8em] md:text-[1em]'>{item.quote} </p>
+              <p className='text-[0.8em] md:text-[1em] overflow-scroll items-start place-content-center text-[0.7em] md:text-[1em] h-[35%]'>{item.quote} </p>
               <div className="who flex relative w-[100%] justify-evenly">
                <img src={item.image} alt={item.title} className='rounded-[2em]' />
                <div className="name-place flex flex-col items-end">

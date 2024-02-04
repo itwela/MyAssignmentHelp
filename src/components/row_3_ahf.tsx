@@ -15,7 +15,7 @@ export const RowAHF = () => {
       {rowthreedata.map((item, index) => (
            <div
            key={index}
-           className="dark-div gap-4 rounded-[1.5em] min-w-[70%] md:min-w-[45%] h-[25em] p-4 flex flex-col justify-evenly"
+           className="dark-div gap-4 rounded-[1.5em] min-w-[60%] md:min-w-[40%] h-[25em] p-4 flex flex-col justify-evenly"
            >
             <div className="image-container w-[100%] h-[30%] flex place-content-center place-items-center">
                <img src={item.image} alt={item.title} className='svg-icon w-[150px] p-4' />

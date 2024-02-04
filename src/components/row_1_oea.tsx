@@ -15,7 +15,7 @@ export const RowOEA = () => {
           {rowonedata.map((item, index) => (
             <div
               key={index}
-              className="dark-div rounded-[1.5em] min-w-[70%] md:min-w-[45%] h-[20em] p-4 pt-6 flex flex-col justify-evenly gap-4"
+              className="dark-div rounded-[1.5em] min-w-[60%] md:min-w-[40%] h-[20em] p-4 pt-6 flex flex-col justify-evenly gap-4"
             >
               <div className="image-container w-[100%] h-[40%] flex place-content-center place-items-center">
                <img src={item.image} alt={item.title} className='svg-icon w-[140px] p-4' />

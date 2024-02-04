@@ -69,7 +69,7 @@ export const Footer =  () => {
           <DarkMode/>
          </div>
 
-         <div className="contact-nd-extras text-[0.6em] flex w-[100%] justify-around gap-4 pt-5">
+         <div className="contact-nd-extras text-[0.6em] md:text-[1em] flex w-[100%] justify-around gap-4 pt-5">
             <div className="flex flex-col gap-2">
                 <div className="pb-1 flex gap-2">
                 Contact us
@@ -126,7 +126,7 @@ export const Footer =  () => {
 
 
           <div className="terms pt-6">
-            <ul className="flex text-[0.5em] md:text-[0.6em] w-[100%] justify-evenly">
+            <ul className="flex text-[0.5em] md:text-[0.9em] w-[100%] justify-evenly">
               <li>
               <a href="">Term of use</a>
               </li>
