@@ -68,12 +68,32 @@ export const RowOEA = () => {
                     </div>
                     <p className='card-title font-black md:text-[1.5em] lg:text-[3em]'>{item.title} </p>
                     <div className="desc-container w-[100%] flex place-items-center overflow-scroll md:overflow-visible items-start place-content-center text-[0.7em] md:text-[1em] h-[100%]">
-                    <p className=''>{item.description} </p>
+                      <p className=''>{item.description} </p>
                     </div>
-                  </div>
-                ))}
-            
-            </div>
+
+                    {/* Buttons */}
+                    <div className="btn-wrapper pl-[4em]">
+                      <div className='w-[100%] flex place-content-center justify-center gap-7 pr-[5em]'>
+                      {rowonedata.map((item, index) => (
+                        <button
+                          key={index}
+                          className='text-[0.7em] p-4  rounded-[1.5em] translate-y-[-25%]'
+                          onMouseEnter={() => handleMouseEnterButton(index)}
+                          // onMouseLeave={handleMouseLeaveButton}
+                          style={{
+                            backgroundColor: activeIndex === index ? 'blue' : 'gray',
+                            border: 'none',
+                            cursor: 'pointer',
+                          }}
+                            >
+                          </button>
+                          ))}
+                        </div> 
+                      </div>
+                      </div>
+                      ))}
+                      </div>
+                      
             <div className="row-1-title-cont w-[50%] font-black flex flex-col">
 
               <div className='animation-el'>
@@ -87,25 +107,7 @@ export const RowOEA = () => {
             </div>
           </div>
 
-            {/* Buttons */}
-          <div className="btn-wrapper pl-[4em]">
-            <div className='w-[100%] flex place-content-center justify-center gap-7 pr-[5em]'>
-            {rowonedata.map((item, index) => (
-              <button
-                key={index}
-                className='text-[0.7em] p-4  rounded-[1.5em] translate-y-[-25%]'
-                onMouseEnter={() => handleMouseEnterButton(index)}
-                // onMouseLeave={handleMouseLeaveButton}
-                style={{
-                  backgroundColor: activeIndex === index ? 'blue' : 'gray',
-                  border: 'none',
-                  cursor: 'pointer',
-                }}
-              >
-              </button>
-            ))}
-            </div> 
-          </div>
+
       </div>
 
       {/* end */}
