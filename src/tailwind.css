@@ -2,8 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-::-webkit-scrollbar{
+
+
+* {
+    scroll-behavior: smooth;
+}
+
+.no-sb::-webkit-scrollbar {
     display: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    width: 1px; /* Width of the scrollbar */
+    height: 9px; /* Width of the scrollbar */
+    cursor: pointer;
+    background-color: transparent; /* Background color of the scrollbar track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Border radius of the scrollbar thumb */
 }
 
 

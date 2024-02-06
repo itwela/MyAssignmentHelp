@@ -36,11 +36,11 @@ export const MovingTestimonials = () => {
     <div className='flex flex-col pt-7'>
 
         <div className="first-row-moving flex flex-col gap-7">
-            <div className="row-1-title-cont w-[100%] font-black">
-            <h2 className='row-1-title text-[1em] md:text-[1.3em]'>
+            <div className="row-1-title-cont w-[100%] text-center flex flex-col items-center">
+            <h2 className='row-1-title text-[1.3em] md:text-[1.9em] font-black'>
             Still in Two Minds? The Proof is in Numbers!
                 </h2>
-                <h4>
+                <h4 className='text-[0.8em] md:text-[1.5em]'>
                     <strong>38983</strong> Genuine Reviews With a Rating of <strong>4.9/5</strong>.
                 </h4>
             </div>
@@ -51,24 +51,24 @@ export const MovingTestimonials = () => {
                     justifyContent: 'evenly',
                 }}
                 direction='right'
+                pauseOnHover
                 >
-            <div className="row-1-cont flex gap-[3em] pl-[3em]">
+            <div className="row-1-cont no-sb flex gap-[3em] pl-[3em] ">
             {reviewdataOne.map((item, index) => (
                 <div
                 key={index}
-                className="dark-div p-5 w-[15em] md:w-[30em] h-[20em] rounded-[1.5em]"
+                className="dark-div cursor-pointer p-5 w-[15em] md:w-[30em] h-[20em] rounded-[1.5em]"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave} 
                 >
                     <div className='flex flex-col gap-2'>
+                        <div className="star flex justify-between w-[100%]"><span> {item.star}</span> {item.date}</div>
                         <h2 className="card-title name font-black md:text-[1.5em]">{item.title}</h2>
-                        <div className="star">{item.star}</div>
                     </div>
-                    <p className='text-[0.8em] md:text-[1em] overflow-scroll items-start place-content-center text-[0.7em] md:text-[1em] h-[35%]'>{item.star} </p>
+                    <p className='text-[0.8em] md:text-[1em] overflow-scroll items-start place-content-center text-[0.7em] md:text-[1em] h-[35%] no-sb'>Essay: {item.assignment}, Deadline: {item.deadline} </p>
                     <div className="who flex relative w-[100%] justify-evenly">
                     {/* <img src={item.deadline} alt={item.title} className='rounded-[2em]' /> */}
                     <div className="name-place flex flex-col items-end">
-                        <h3 className='text-[0.8em] md:text-[1em]'>{item.title}</h3>
                         <h3 className='text-[0.8em] md:text-[1em]'>{item.review}</h3>
                     </div>
                     </div> 
@@ -87,24 +87,24 @@ export const MovingTestimonials = () => {
                     justifyContent: 'around'
                 }}
                 direction='left'
+                pauseOnHover
                 >
-            <div className="row-1-cont flex gap-[3em] pl-[3em]">
-            {reviewdataOne.map((item, index) => (
+            <div className="row-1-cont no-sb flex gap-[3em] pl-[3em]">
+            {reviewdataTwo.map((item, index) => (
                 <div
                 key={index}
-                className="dark-div p-5 w-[15em] md:w-[30em] h-[20em] rounded-[1.5em]"
+                className="dark-div cursor-pointer p-5 w-[15em] md:w-[30em] h-[20em] rounded-[1.5em]"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave} 
                 >
                     <div className='flex flex-col gap-2'>
+                    <div className="star flex justify-between w-[100%]"><span> {item.star}</span> {item.date}</div>
                         <h2 className="card-title name font-black md:text-[1.5em]">{item.title}</h2>
-                        <div className="star">{item.star}</div>
                     </div>
-                    <p className='text-[0.8em] md:text-[1em] overflow-scroll items-start place-content-center text-[0.7em] md:text-[1em] h-[35%]'>{item.star} </p>
+                    <p className='text-[0.8em] md:text-[1em] overflow-scroll items-start place-content-center text-[0.7em] md:text-[1em] h-[35%] no-sb'>Essay: {item.assignment}, Deadline: {item.deadline} </p>
                     <div className="who flex relative w-[100%] justify-evenly">
                     {/* <img src={item.deadline} alt={item.title} className='rounded-[2em]' /> */}
                     <div className="name-place flex flex-col items-end">
-                        <h3 className='text-[0.8em] md:text-[1em]'>{item.title}</h3>
                         <h3 className='text-[0.8em] md:text-[1em]'>{item.review}</h3>
                     </div>
                     </div> 

@@ -32,7 +32,7 @@ export const Testimonials = () => {
     </div>
 
     <div className="row-1-wrapper w-[100%]">
-      <div className="row-1-cont flex gap-4 place-items-start">
+      <div className="row-1-cont no-sb flex gap-4 place-items-start">
       {rowfourdata.map((item, index) => (
             <div
               key={index}
@@ -40,11 +40,11 @@ export const Testimonials = () => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}   
             >
-              <div className='flex flex-col gap-2'>
+              <div className='flex flex-col gap-2 '>
                 <h2 className="card-title name font-black md:text-[1.5em]">{item.title}</h2>
                 <div className="star">{item.star}</div>
               </div>
-              <p className='text-[0.8em] md:text-[1em] overflow-scroll items-start place-content-center text-[0.7em] md:text-[1em] h-[35%]'>{item.quote} </p>
+              <p className='text-[0.8em] md:text-[1em] overflow-scroll no-sb items-start place-content-center text-[0.7em] md:text-[1em] h-[35%]'>{item.quote} </p>
               <div className="who flex relative w-[100%] justify-evenly">
                <img src={item.image} alt={item.title} className='rounded-[2em]' />
                <div className="name-place flex flex-col items-end">

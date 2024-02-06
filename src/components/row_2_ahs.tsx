@@ -1,5 +1,7 @@
 import React, { MouseEvent } from 'react';
 import rowtwodata from './row_2_data';
+import { DotLottiePlayer, Controls } from '@dotlottie/react-player';
+
 
 export const RowAHS = () => {
 
@@ -21,32 +23,73 @@ export const RowAHS = () => {
 
   return (
     <>
-    <div className="row-1-title-cont w-[100%] font-black">
-      <h2 className='row-1-title text-[1em] md:text-[1.3em]'>
-      Assignment Help Services
-      </h2>
-    </div>
 
-    <div className="row-1-wrapper w-[100%]">
-        <div className="row-1-cont flex gap-4 place-items-start">
-          {rowtwodata.map((item, index) => (
-            <div
-            key={index}
-            className="dark-div gap-4 rounded-[1.5em] min-w-[60%] md:min-w-[40%] h-[25em] p-4 flex flex-col justify-evenly"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            >
-             <div className="image-container w-[100%] h-[30%] flex place-content-center place-items-center">
-               <img src={item.image} alt={item.title} className='svg-icon w-[130px] p-4' />
-              </div>
-              <p className='card-title font-black md:text-[1.5em]'>{item.title} </p>
-              <div className="desc-container w-[100%] flex place-items-center overflow-scroll items-start place-content-center text-[0.7em] md:text-[1em] h-[35%]">
-              <p className=''>{item.description} </p>
-              </div>
+      {/* desktop version */}
+      <div className="row-1-wrapper hidden w-[100%] md:h-[50vh] mt-[7em] mb-[3em] md:flex justify-around items-center">
+      <div className="row-1-title-cont w-[50%] font-black flex flex-col">
+
+          <div className='animation-el scale-[80%]'>
+          <DotLottiePlayer
+          src="https://lottie.host/73aaab1e-fd35-4b93-8546-9ee6c8a4ff3c/CLKR9SU4gw.lottie"
+          autoplay
+          loop
+          >
+          </DotLottiePlayer>
           </div>
-          ))}
+      </div>
+        <div className="row-1-cont custom-scrollbar overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-start">
+            {rowtwodata.map((item, index) => (
+              <div
+                key={index}
+                className="rounded-[1.5em] min-w-[60%] md:min-w-[100%] h-[20em] p-4 pt-6 flex flex-col justify-evenly gap-4"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <div className="image-container w-[100%]  flex place-content-center place-items-center">
+                {/* <img src={item.image} alt={item.title} className='svg-icon w-[140px] p-4' /> */}
+                </div>
+                <p className='card-title font-black md:text-[1.5em] lg:text-[3em]'>{item.title} </p>
+                <div className="desc-container w-[100%] flex place-items-center overflow-scroll md:overflow-visible items-start place-content-center text-[0.7em] md:text-[1em] h-[100%]">
+                <p className=''>{item.description} </p>
+                </div>
+              </div>
+            ))}
         </div>
       </div>
+      {/* end */}
+
+      {/* mobile version */}
+      <div className="row-1-wrapper w-[100%] h-[70vh] flex flex-col place-items-center mb-[3em] md:hidden">
+      <div className="row-1-title-cont w-[70%] h-[70%] font-black">
+
+        <div className='animation-el'>
+        <DotLottiePlayer
+        src="https://lottie.host/34c0482a-888a-47b3-8efb-c057b46378e5/pyKAz1LWt2.lottie"
+        autoplay
+        loop
+        >
+        </DotLottiePlayer>
+        </div>
+      </div>
+        
+        <div className="row-1-cont translate-y-[-0.5em] custom-scrollbar overflow-y-hidden p-4 flex gap-4 place-items-center w-[70%]">
+            {rowtwodata.map((item, index) => (
+              <div
+                key={index}
+                className="rounded-[1.5em] text-center place-items-center min-w-[100%] h-[15em] p-9 pt-6 flex flex-col justify-evenly"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <p className='card-title font-black md:text-[1.5em] lg:text-[3em] translate-y-[1em]'>{item.title} </p>
+                <div className="desc-container overflow-hidden w-[100%] flex place-items-center place-content-center text-[0.7em]">
+                <p className=''>{item.description} </p>
+                </div>
+              </div>
+            ))}
+        </div>
+      </div>
+      {/* end */}
+
     </>
   );
 };

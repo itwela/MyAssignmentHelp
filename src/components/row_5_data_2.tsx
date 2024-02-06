@@ -7,7 +7,7 @@ const reiewdataTwo = [
         deadline: "12 days",
         review: "very good work! appreciate the time it takes and the grade I get for this work. thanks",
         userId: "1***621",
-        date: "05 Feb 2024"
+        date: 'Mar 8, 2021'
       },
       {
         title: "Psychology",
@@ -16,7 +16,7 @@ const reiewdataTwo = [
         deadline: "3 days",
         review: "Thank you for the excellent job done. The work was delivered on time, and I got 94 points. I appreciate your effort.",
         userId: "1***17",
-        date: "04 Feb 2024"
+        date: 'Jun 17, 2022'
       },
       {
         title: "Statistics",
@@ -25,7 +25,7 @@ const reiewdataTwo = [
         deadline: "4 days",
         review: "Thanks to MyAssignmentHelp, I can manage my daily life without late-night assignments.",
         userId: "1***17",
-        date: "04 Feb 2024"
+        date: 'Dec 29, 2021'
       },
       {
         title: "Statistics",
@@ -34,7 +34,7 @@ const reiewdataTwo = [
         deadline: "4 days",
         review: "Excellent delivery. The assignment was thoroughly written, with all requirements met. More so, it was sent in on time.",
         userId: "1***17",
-        date: "04 Feb 2024"
+        date: 'Apr 21, 2023'
       },
       {
         title: "Statistics",
@@ -43,7 +43,7 @@ const reiewdataTwo = [
         deadline: "9 days",
         review: "Overall, good summary. The paper was in line with what the article and not drifting off topic.",
         userId: "2***41",
-        date: "04 Feb 2024"
+        date: 'Nov 14, 2020'
       },
       {
         title: "Healthcare",
@@ -52,7 +52,7 @@ const reiewdataTwo = [
         deadline: "7 days",
         review: "knowledgeable about the subject but miss few steps in requirements but excellent work",
         userId: "1***921",
-        date: "04 Feb 2024"
+        date: 'Feb 2, 2022'
       },
       {
         title: "Sociology",
@@ -61,7 +61,7 @@ const reiewdataTwo = [
         deadline: "9 days",
         review: "good workvery detail explanation. Provided good examples. Very minimal spelling mistakes .Over all good",
         userId: "1***983",
-        date: "04 Feb 2024"
+        date: 'Sep 9, 2023'
       },
       {
         title: "Psychology",
@@ -70,7 +70,7 @@ const reiewdataTwo = [
         deadline: "5 days",
         review: "Thanks for the great work done. I got 100% for the assignment. Thanks for the delivery on time.",
         userId: "1***17",
-        date: "03 Feb 2024"
+        date: 'Jul 12, 2021'
       },
       {
         title: "Sociology",
@@ -82,13 +82,13 @@ const reiewdataTwo = [
         date: "03 Feb 2024"
       },
       {
-        title: "It Write Up",
+        title: "I.T Write Up",
         star: '⭐⭐⭐⭐⭐',
         assignment: "Essay: 4 Pages",
         deadline: "5 days",
         review: "Great product, I received a perfect 100 on the assignment. I would highly recommend using this service.",
         userId: "3***50",
-        date: "03 Feb 2024"
+        date: 'Aug 26, 2022'
       },
 
 
