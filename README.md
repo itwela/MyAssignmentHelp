@@ -26,3 +26,4 @@ After some great feedback, so far I have implimented these features:
 - Added animations to liven up the home page
 - Redesigned the row content (Mobile and Desktop Layout)
 - Implimented a Hover system to boost user experience. Made it easier to digest content by sorting content based on what youre hovering over.
+- Implimented Scroll based animations to content
