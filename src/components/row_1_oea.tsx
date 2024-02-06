@@ -1,9 +1,15 @@
-import React, { MouseEvent, useState } from 'react';
+import React, { MouseEvent, useState, useRef, useEffect } from 'react';
 import rowonedata from './row_1_data';
 import { DotLottiePlayer, Controls } from '@dotlottie/react-player';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 
 export const RowOEA = () => {
+
+  // orange hover color --------
 
   const handleMouseEnter = (event: MouseEvent<HTMLDivElement>) => {
     const darkDiv = event.currentTarget;
@@ -20,6 +26,9 @@ export const RowOEA = () => {
       cardTitle.classList.remove('orange-title');
     }
   };
+
+  // ----------------------------
+
 
     // hover sorting ------------
   
@@ -46,13 +55,40 @@ export const RowOEA = () => {
     // Reorder rowonedata based on activeIndex
     const reorderedData = reorderData(activeIndex);
   
+    // -----------------
+    
+    const animateTitle = useRef(null);
+    const animateLottie = useRef(null);
+    const triggerRef = useRef(null);
+    
+    useGSAP(() => {
+      const title = animateTitle.current;
+      const lottie = animateLottie.current;
+      const trigger = triggerRef.current;
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: trigger,
+          start: 'top center',
+          end: 'bottom 80%',
+          scrub: 1,
+        },
+      });
+  
+      tl.from(title, { x: '-100%', duration: 0.518, opacity: 0, ease: "sine.inOut" })
+      .from(lottie, { x: '100%', duration: 0.518, opacity: 0, ease: "sine.inOut" });
+  
+    }, []);
+
 
   return (
     <>
 
+    <div className="trig translate-y-[-5em] w-[100vw] h-[1vh] top-0 left-0" ref={triggerRef}></div>
+
       {/* desktop version */}
       <div className="row-1-wrapper hidden w-[100%] md:h-[50vh] mt-[7em] mb-[3em] md:flex justify-around items-center">
-        <div className="row-1-cont no-sb overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-center">
+        <div ref={animateTitle} className="row-1-cont no-sb overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-center">
             {reorderedData.map((item, index) => (
               <div
                 key={index}
@@ -60,9 +96,9 @@ export const RowOEA = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                <p className='card-title font-black md:text-[1.5em] lg:text-[3em]'>{item.title} </p>
+                <p id='title' className='card-title font-black md:text-[1.5em] lg:text-[3em]'>{item.title} </p>
                 <div className="desc-container w-[100%] flex place-items-center overflow-scroll md:overflow-visible items-start place-content-center text-[1em] ">
-                    <p className=''>{item.description} </p>
+                    <p id='description' className=''>{item.description} </p>
                 </div>
 
                   {/* Buttons */}
@@ -70,6 +106,7 @@ export const RowOEA = () => {
                     <div className='w-[100%] flex place-content-center justify-center gap-7'>
                     {rowonedata.map((item, index) => (
                       <button
+                        id='buttons'
                         key={index}
                         className='text-[0.7em] p-4 rounded-[1.5em]'
                         onMouseEnter={() => handleMouseEnterButton(index)}
@@ -93,7 +130,7 @@ export const RowOEA = () => {
 
         </div>
 
-        <div className="row-1-title-cont w-[50%] font-black flex flex-col">
+        <div ref={animateLottie} className="row-1-title-cont w-[50%] font-black flex flex-col">
 
       <div className='animation-el scale-[80%]'>
       <DotLottiePlayer

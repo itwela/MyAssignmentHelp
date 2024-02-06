@@ -1,6 +1,11 @@
-import React, { MouseEvent, useState } from 'react';
+import React, { MouseEvent, useState, useRef } from 'react';
 import rowtwodata from './row_2_data';
 import { DotLottiePlayer, Controls } from '@dotlottie/react-player';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 
 export const RowAHS = () => {
@@ -45,14 +50,40 @@ export const RowAHS = () => {
   
     // Reorder rowonedata based on activeIndex
     const reorderedData = reorderData(activeIndex);
+
+    // gsap -------------
   
+    const animateTitle = useRef(null);
+    const animateLottie = useRef(null);
+    const triggerRef = useRef(null);
+    
+    useGSAP(() => {
+      const title = animateTitle.current;
+      const lottie = animateLottie.current;
+      const trigger = triggerRef.current;
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: trigger,
+          start: 'top center',
+          end: 'bottom 80%',
+          scrub: 1,
+        },
+      });
+  
+      tl.from(title, { x: '100%', duration: 0.518, opacity: 0, ease: "sine.inOut" })
+      .from(lottie, { x: '-100%', duration: 0.518, opacity: 0, ease: "sine.inOut" });
+  
+    }, []);
 
   return (
     <>
 
+    <div className="trig w-[100vw] h-[1vh] top-0 left-0" ref={triggerRef}></div>
+
       {/* desktop version */}
       <div className="row-1-wrapper hidden w-[100%] md:h-[50vh] mt-[7em] mb-[3em] md:flex justify-around items-center">
-      <div className="row-1-title-cont w-[50%] font-black flex flex-col">
+      <div ref={animateLottie} className="row-1-title-cont w-[50%] font-black flex flex-col">
 
           <div className='animation-el scale-[80%]'>
           <DotLottiePlayer
@@ -63,7 +94,7 @@ export const RowAHS = () => {
           </DotLottiePlayer>
           </div>
       </div>
-        <div className="row-1-cont no-sb overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-center">
+        <div ref={animateTitle} className="row-1-cont no-sb overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-center">
             {reorderedData.map((item, index) => (
               <div
                 key={index}

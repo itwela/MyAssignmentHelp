@@ -1,6 +1,12 @@
-import React, { MouseEvent, useState } from 'react';
+import React, { MouseEvent, useState, useRef } from 'react';
 import rowthreedata from './row_3_data';
 import { DotLottiePlayer, Controls } from '@dotlottie/react-player';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 export const RowAHF = () => {
 
@@ -44,6 +50,27 @@ export const RowAHF = () => {
     
       // Reorder rowonedata based on activeIndex
       const reorderedData = reorderData(activeIndex);
+
+      const animateTitle = useRef(null);
+      const animateLottie = useRef(null);
+      
+      useGSAP(() => {
+        const title = animateTitle.current;
+        const lottie = animateLottie.current;
+    
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: title,
+            start: 'top center',
+            end: 'bottom 80%',
+            scrub: 1,
+          },
+        });
+    
+        tl.from(title, { x: '-100%', duration: 0.518, opacity: 0, ease: "sine.inOut" })
+        .from(lottie, { x: '100%', duration: 0.518, opacity: 0, ease: "sine.inOut" });
+    
+      }, []);
   
 
   return (
@@ -51,7 +78,7 @@ export const RowAHF = () => {
 
       {/* desktop version */}
       <div className="row-1-wrapper hidden w-[100%] md:h-[50vh] mt-[7em] mb-[3em] md:flex justify-evenly items-center">
-        <div className="row-1-cont no-sb overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-start">
+        <div ref={animateTitle} className="row-1-cont no-sb overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-start">
             {reorderedData.map((item, index) => (
               <div
                 key={index}
@@ -63,7 +90,7 @@ export const RowAHF = () => {
                 {/* <img src={item.image} alt={item.title} className='svg-icon w-[140px] p-4' /> */}
                 </div>
                 <p className='card-title font-black md:text-[1.5em] lg:text-[3em]'>{item.title} </p>
-                <div className="desc-container w-[100%] flex place-items-center overflow-scroll md:overflow-visible items-start place-content-center text-[0.7em] md:text-[1em] h-[100%]">
+                <div className="desc-container w-[100%] flex place-items-center overflow-scroll md:overflow-visible items-start place-content-center text-[0.7em] md:text-[1em]">
                 <p className=''>{item.description} </p>
                 </div>
 
@@ -91,7 +118,7 @@ export const RowAHF = () => {
               </div>
             ))}
         </div>
-        <div className="row-1-title-cont w-[50%] font-black flex flex-col">
+        <div ref={animateLottie} className="row-1-title-cont w-[50%] font-black flex flex-col">
 
           <div className='animation-el scale-[80%]'>
           <DotLottiePlayer
