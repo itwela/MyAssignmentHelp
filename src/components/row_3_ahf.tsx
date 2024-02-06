@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react';
+import React, { MouseEvent, useState } from 'react';
 import rowthreedata from './row_3_data';
 import { DotLottiePlayer, Controls } from '@dotlottie/react-player';
 
@@ -20,17 +20,42 @@ export const RowAHF = () => {
     }
   };
 
+      // hover sorting ------------
+  
+      const [activeIndex, setActiveIndex] = useState(-1);
+
+      const handleMouseEnterButton = (index: number) => {
+        setActiveIndex(index);
+      };
+    
+      const handleMouseLeaveButton = () => {
+        setActiveIndex(-1);
+      };
+    
+      // Function to reorder rowonedata based on activeIndex
+      const reorderData = (activeIndex: number) => {
+        if (activeIndex === -1) return rowthreedata;
+    
+        const hoveredItem = rowthreedata[activeIndex];
+        const remainingItems = rowthreedata.filter((item, index) => index !== activeIndex);
+    
+        return [hoveredItem, ...remainingItems];
+      };
+    
+      // Reorder rowonedata based on activeIndex
+      const reorderedData = reorderData(activeIndex);
+  
 
   return (
     <>
 
       {/* desktop version */}
       <div className="row-1-wrapper hidden w-[100%] md:h-[50vh] mt-[7em] mb-[3em] md:flex justify-evenly items-center">
-        <div className="row-1-cont custom-scrollbar overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-start">
-            {rowthreedata.map((item, index) => (
+        <div className="row-1-cont no-sb overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-start">
+            {reorderedData.map((item, index) => (
               <div
                 key={index}
-                className="rounded-[1.5em] min-w-[60%] md:min-w-[100%] h-[20em] p-4 pt-6 flex flex-col justify-evenly gap-4"
+                className="rounded-[1.5em] min-w-[60%] md:min-w-[100%] p-4 pt-6 flex flex-col justify-evenly gap-4"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -41,6 +66,28 @@ export const RowAHF = () => {
                 <div className="desc-container w-[100%] flex place-items-center overflow-scroll md:overflow-visible items-start place-content-center text-[0.7em] md:text-[1em] h-[100%]">
                 <p className=''>{item.description} </p>
                 </div>
+
+                  {/* Buttons */}
+                  <div className="btn-wrapper pt-4">
+                    <div className='w-[100%] flex place-content-center justify-center gap-7'>
+                    {rowthreedata.map((item, index) => (
+                      <button
+                        key={index}
+                        className='text-[0.7em] p-2  rounded-[1.5em]'
+                        onMouseEnter={() => handleMouseEnterButton(index)}
+                        // onMouseLeave={handleMouseLeaveButton}
+                        style={{
+                          backgroundColor: activeIndex === index ? 'blue' : 'gray',
+                          border: 'none',
+                          cursor: 'pointer',
+                        }}
+                          >
+                        </button>
+                        ))}
+                    </div> 
+                    </div>
+                    {/* button end */}
+
               </div>
             ))}
         </div>

@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react';
+import React, { MouseEvent, useState } from 'react';
 import rowtwodata from './row_2_data';
 import { DotLottiePlayer, Controls } from '@dotlottie/react-player';
 
@@ -21,6 +21,32 @@ export const RowAHS = () => {
     }
   };
 
+    // hover sorting ------------
+  
+    const [activeIndex, setActiveIndex] = useState(-1);
+
+    const handleMouseEnterButton = (index: number) => {
+      setActiveIndex(index);
+    };
+  
+    const handleMouseLeaveButton = () => {
+      setActiveIndex(-1);
+    };
+  
+    // Function to reorder rowonedata based on activeIndex
+    const reorderData = (activeIndex: number) => {
+      if (activeIndex === -1) return rowtwodata;
+  
+      const hoveredItem = rowtwodata[activeIndex];
+      const remainingItems = rowtwodata.filter((item, index) => index !== activeIndex);
+  
+      return [hoveredItem, ...remainingItems];
+    };
+  
+    // Reorder rowonedata based on activeIndex
+    const reorderedData = reorderData(activeIndex);
+  
+
   return (
     <>
 
@@ -37,23 +63,45 @@ export const RowAHS = () => {
           </DotLottiePlayer>
           </div>
       </div>
-        <div className="row-1-cont custom-scrollbar overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-start">
-            {rowtwodata.map((item, index) => (
+        <div className="row-1-cont no-sb overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-center">
+            {reorderedData.map((item, index) => (
               <div
                 key={index}
-                className="rounded-[1.5em] min-w-[60%] md:min-w-[100%] h-[20em] p-4 pt-6 flex flex-col justify-evenly gap-4"
+                className="rounded-[1.5em] min-w-[60%] md:min-w-[100%] p-4 pt-6 flex flex-col justify-evenly gap-4 place-content-center"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                <div className="image-container w-[100%]  flex place-content-center place-items-center">
-                {/* <img src={item.image} alt={item.title} className='svg-icon w-[140px] p-4' /> */}
-                </div>
                 <p className='card-title font-black md:text-[1.5em] lg:text-[3em]'>{item.title} </p>
-                <div className="desc-container w-[100%] flex place-items-center overflow-scroll md:overflow-visible items-start place-content-center text-[0.7em] md:text-[1em] h-[100%]">
-                <p className=''>{item.description} </p>
+                <div className="desc-container w-[100%] flex place-items-center overflow-scroll md:overflow-visible items-start place-content-center text-[1em] ">
+                    <p className=''>{item.description} </p>
                 </div>
+
+                  {/* Buttons */}
+                  <div className="btn-wrapper pt-4">
+                    <div className='w-[100%] flex place-content-center justify-center gap-7'>
+                    {rowtwodata.map((item, index) => (
+                      <button
+                        key={index}
+                        className='text-[0.7em] p-4  rounded-[1.5em]'
+                        onMouseEnter={() => handleMouseEnterButton(index)}
+                        // onMouseLeave={handleMouseLeaveButton}
+                        style={{
+                          backgroundColor: activeIndex === index ? 'blue' : 'gray',
+                          border: 'none',
+                          cursor: 'pointer',
+                        }}
+                          >
+                        </button>
+                        ))}
+                    </div> 
+                    </div>
+                    {/* button end */}
+                    
               </div>
+              
             ))}
+        
+
         </div>
       </div>
       {/* end */}

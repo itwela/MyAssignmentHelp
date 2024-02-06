@@ -4,17 +4,15 @@
 
 
 
-* {
-    scroll-behavior: smooth;
-}
+
 
 .no-sb::-webkit-scrollbar {
     display: none;
 }
 
+
 .custom-scrollbar::-webkit-scrollbar {
     scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
     width: 1px; /* Width of the scrollbar */
     height: 9px; /* Width of the scrollbar */
     cursor: pointer;

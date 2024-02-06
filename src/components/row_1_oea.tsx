@@ -59,7 +59,7 @@ export const RowOEA = () => {
                 {reorderedData.map((item, index) => (
                   <div
                     key={index}
-                    className="rounded-[1.5em] min-w-[60%] md:min-w-[100%] h-[20em] p-4 pt-6 flex flex-col justify-evenly gap-4"
+                    className="rounded overflow-hidden-[1.5em] min-w-[60%] md:min-w-[100%] h-[20em] p-4 pt-6 flex flex-col justify-evenly gap-4"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                   >
@@ -72,7 +72,7 @@ export const RowOEA = () => {
                     </div>
 
                     {/* Buttons */}
-                    <div className="btn-wrapper pl-[4em]">
+                    <div className="btn-wrapper pt-4">
                       <div className='w-[100%] flex place-content-center justify-center gap-7 pr-[5em]'>
                       {rowonedata.map((item, index) => (
                         <button
@@ -88,12 +88,14 @@ export const RowOEA = () => {
                             >
                           </button>
                           ))}
-                        </div> 
+                      </div> 
                       </div>
+                      {/* button end */}
+
                       </div>
                       ))}
                       </div>
-                      
+
             <div className="row-1-title-cont w-[50%] font-black flex flex-col">
 
               <div className='animation-el'>
