@@ -9,6 +9,8 @@ import { Form } from "./components/form";
 import logo from '../src/assets/logo.svg'
 import { useRef, useEffect, useLayoutEffect } from 'react';
 import gsap from "gsap";
+import { MovingTestimonials } from "./components/row_5_movingReviews";
+
 
 function App() {
 
@@ -119,6 +121,7 @@ function App() {
       <Testimonials/>
       <div className="form-container">
       <Form/>
+      <MovingTestimonials/>
       </div>
       </div>
 
