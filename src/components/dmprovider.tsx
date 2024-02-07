@@ -77,12 +77,13 @@ const DarkMode: React.FC = () => {
   }, [isDarkMode]); // Run this effect whenever isDarkMode changes
 
   return (
+    <div className='p-3 bg-[#ee8038]' onClick={handleDarkModeToggle}>
     <img
       id="darkModeToggle"
-      className='dark-icon cursor-pointer w-[20px] scale-x-[-1] '
+      className='dark-icon fixed bottom-10 z-[4] right-10 cursor-pointer w-[40px] scale-x-[-1] '
       src={isDarkMode ? lightModeIcon : darkModeIcon}
-      onClick={handleDarkModeToggle}
     />
+    </div>
   );
 };
 

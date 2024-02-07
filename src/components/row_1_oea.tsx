@@ -85,7 +85,7 @@ export const RowOEA = () => {
   return (
     <>
 
-    <div className="trig translate-y-[-5em] w-[100vw] h-[1vh] top-0 left-0" ref={triggerRef}></div>
+    <div className="trig translate-y-[-8em] w-[100vw] h-[1vh] top-0 left-0" ref={triggerRef}></div>
       {/* desktop version */}
 
       <div className="row-1-wrapper relative hidden w-[100%] md:h-[50vh] mb-[1em] md:flex justify-around items-center mt-[2em]">

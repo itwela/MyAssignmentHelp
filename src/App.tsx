@@ -11,7 +11,7 @@ import logo from '../src/assets/logo.svg'
 import { useRef, useEffect, useLayoutEffect } from 'react';
 import gsap from "gsap";
 import { MovingTestimonials } from "./components/row_5_movingReviews";
-
+import DarkMode from "./components/dmprovider";
 
 function App() {
 
@@ -116,7 +116,8 @@ function App() {
           </a>
         </div>
       </div>
-    
+      <DarkMode/>
+
       <RowOEA/>
       <div className="scrollers-home p-4 md:p-9 flex flex-col gap-8 w-[100%] pt-[3em]">
       <RowAHS/>
