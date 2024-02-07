@@ -2,8 +2,6 @@ import gsap from "gsap";
 import DarkMode from "./dmprovider";
 import { useGSAP } from "@gsap/react"; 
 import { useRef } from 'react';
-import hambIcon from '../assets/hamburger.png'
-import hambIconWhite from '../assets/hamburger-white.png'
 
 export const Header = () => {
   const fadeTopOne = useRef(null);
@@ -51,7 +49,7 @@ export const Header = () => {
             <span className="">___</span>
           </div> */}
 
-          <a href="#" className="hover:text-[#ee8038]">Home</a>
+          <a href="/" className="hover:text-[#ee8038]">Home</a>
           <a href="#" className="hover:text-[#ee8038]" onMouseDown={handleMenuToggle}>Resources</a>
           <DarkMode/>
         </nav>

@@ -86,11 +86,11 @@ function App() {
       <div className="intro relative" 
       ref={toplayer}
       >
-        <div id="intro-slide" className="h-[100vh] overflow-hidden text-[1.7em] text-black md:text-[3.2em] p-10 bg-gray-50 justify-center md:items-center absolute top-0 left-0 z-[1000] w-full flex flex-col gap-[5em] md:gap-[2em]">
+        <div id="intro-slide" className="h-[100vh] overflow-hidden text-[1.7em] text-black md:text-[3.2em] p-10 bg-gray-50 justify-center items-center absolute top-0 left-0 z-[1000] w-full flex flex-col gap-[5em] md:gap-[2em]">
           <h1 id='title-1'>Get Assignment Help...</h1>
           <h1 id='title-2'>From World's No.1...</h1>
           <h1 id='title-3'>Assignment Help Company!</h1>
-          <img src={logo} alt="" id="logo-1" className="w-[100px]" />
+          <img src={logo} alt="" id="logo-1" className="w-[70px] md:w-[100px]" />
         </div>
         <div id="welcome-slide" className="h-[100vh] overflow-hidden opacity-0 text-[2em] md:text-[3.7em] p-10 bg-[#ee8038] justify-center items-center text-white  absolute top-0 left-0 z-[999] w-full flex flex-col gap-[5em] md:gap-[4em]">
           <h1 id='welcome-title'>Welcome.</h1>

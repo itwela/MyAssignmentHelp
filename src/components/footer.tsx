@@ -5,58 +5,57 @@ import darkModeIcon from '../assets/night-mode-dark.png'
 
 export const Footer =  () => {
   return (
-      <footer className="p-5 flex flex-col gap-3 ">
+      <footer className="p-5 flex flex-col gap-3">
           <div className="flex  flex-col md:flex-row gap-9 w-[100%] justify-between ">
             
             <div className="flex gap-4 justify-around md:w-[50%]">
             <ul className="get-to-know cursor-pointer text-[0.6em] flex flex-col  gap-4"> 
             <h3 className="font-black text-[1.3em]">Get to know us</h3>             
-              <li className="blog">Blog</li>
-              <li className="blog">Faqs</li>
-              <li className="blog">How it works</li>
-              <li className="blog">Reviews</li>
-              <li className="blog">Contact</li>
-              <li className="blog">Resources</li>
-              <li className="blog">Our Offers</li>
+                <li className="blog hover:text-[#ee8038]">Blog</li>
+                <li className="blog hover:text-[#ee8038]">Faqs</li>
+                <li className="blog hover:text-[#ee8038]">How it works</li>
+                <li className="blog hover:text-[#ee8038]">Reviews</li>
+                <li className="blog hover:text-[#ee8038]">Contact</li>
+                <li className="blog hover:text-[#ee8038]">Resources</li>
+                <li className="blog hover:text-[#ee8038]">Our Offers</li>
             </ul>
 
             <ul className="best-in-c cursor-pointer text-[0.6em] flex flex-col gap-4">
             <h3 className="font-black text-[1.3em]">Best in Countries</h3>
-                <li className="countries">American</li>
-                <li className="countries">Asia Pacific</li>
-                <li className="countries">Europe</li>
-                <li className="countries">Middle East/Africa</li>
+              <li className="countries hover:text-[#ee8038]">American</li>
+              <li className="countries hover:text-[#ee8038]">Asia Pacific</li>
+              <li className="countries hover:text-[#ee8038]">Europe</li>
+              <li className="countries hover:text-[#ee8038]">Middle East/Africa</li>            
             </ul>
-
             </div>
  
             <div className="flex cursor-pointer gap-4 justify-around md:w-[50%]">
             
             <ul className="fat text-[0.6em] flex flex-col gap-4">
             <h3 className="font-black text-[1.3em]">Free Academic Tools</h3>             
-             <li>Essay Grader</li>
-              <li>Essay Typer</li>
-              <li>Essay Checker</li>
-              <li>Plagiarism Checker</li>
-              <li>Grammar Checker</li>
-              <li>Paraphrasing Tool</li>
-              <li>PDF Summarizer</li>
-              <li className="">Annotated Bibliography <br /> Generator</li>
-              <li>All Free Tools</li>
+                <li className="hover:text-[#ee8038]">Essay Grader</li>
+                <li className="hover:text-[#ee8038]">Essay Typer</li>
+                <li className="hover:text-[#ee8038]">Essay Checker</li>
+                <li className="hover:text-[#ee8038]">Plagiarism Checker</li>
+                <li className="hover:text-[#ee8038]">Grammar Checker</li>
+                <li className="hover:text-[#ee8038]">Paraphrasing Tool</li>
+                <li className="hover:text-[#ee8038]">PDF Summarizer</li>
+                <li className="hover:text-[#ee8038]">Annotated Bibliography <br /> Generator</li>
+                <li className="hover:text-[#ee8038]">All Free Tools</li>
             </ul>
             <ul className="citation-tools text-[0.6em] flex flex-col  justify-evenly gap-4">
             <h3 className="font-black text-[1.3em]">Citation Tools</h3>             
-              <li>APA Citation</li>
-              <li>Chicago Citation</li>
-              <li>Harvard Citation</li>
-              <li>MLA Citation</li>
-              <li>Vancouver Citation</li>
-              <li>Oxford Citation</li>
-              <li>Swinburne Citation</li>
-              <li>AGLC Citation</li>
-              <li>Deakin Citation</li>
-              <li>UTS Citation</li>
-              <li>Griffith Citation</li>
+                <li className="hover:text-[#ee8038]">APA Citation</li>
+                <li className="hover:text-[#ee8038]">Chicago Citation</li>
+                <li className="hover:text-[#ee8038]">Harvard Citation</li>
+                <li className="hover:text-[#ee8038]">MLA Citation</li>
+                <li className="hover:text-[#ee8038]">Vancouver Citation</li>
+                <li className="hover:text-[#ee8038]">Oxford Citation</li>
+                <li className="hover:text-[#ee8038]">Swinburne Citation</li>
+                <li className="hover:text-[#ee8038]">AGLC Citation</li>
+                <li className="hover:text-[#ee8038]">Deakin Citation</li>
+                <li className="hover:text-[#ee8038]">UTS Citation</li>
+                <li className="hover:text-[#ee8038]">Griffith Citation</li>
             </ul>
 
             </div>
