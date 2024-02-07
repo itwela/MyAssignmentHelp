@@ -48,7 +48,7 @@ const animateValueFraction = (start: number, end: number, duration: number, ref:
 
   return (
     <>
-      <section className="wrapper rounded-[1.5em] text-center p-4 relative flex gap-5 md:h-[10em] w-[100%] justify-items-evenly place-items-center text-[#ee8038]">
+      <section className="wrapper rounded-[1.5em] text-center p-4 relative flex gap-5 md:h-[10em] w-[100%] md:w-[60%] justify-items-evenly place-items-center text-[#ee8038]">
         <div className="stat-one w-[80%] flex flex-col place-items-center">
           <span ref={statRef1} className='md:text-[2em] font-black'>0</span>
           <span className='text-[0.6em] md:text-[1.2em]'> DELIVERED ORDERS </span>

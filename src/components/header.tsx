@@ -26,20 +26,12 @@ export const Header = () => {
 
   return (
     <header ref={fadeTopOne} className="p-5 fixed w-full flex md:flex justify-between gap-10 items-center z-[51]">
+      <div className="flex gap-7 items-center">
       <a href="/"> <img src="https://cdn1.myassignmenthelp.com/seo-revamp-assets/logo-icon.svg" alt="" className="logo cursor-pointer" /> </a>
-      
+      <p className="text-[1.4em]">My Assignment Help</p>
+      </div>
       {/* Navigation Sections */}
-      <nav className="hidden items-center space-x-4">
-        <a href="#" className="hover:text-[#ee8038]">Services</a>
-        <a href="#" className="hover:text-[#ee8038]">Experts</a>
-        <a href="#" className="hover:text-[#ee8038]">Reviews</a>
-        <a href="#" className="hover:text-[#ee8038]">About Us</a>
-        <a href="#" className="hover:text-[#ee8038]">Resources</a>
-        <a href="#" className="hover:text-[#ee8038]">Academic Tools</a>
-        <DarkMode/>
-      </nav>
 
-      {/* Mobile Navigation Button */}
       <div className="">
         <nav className=" flex items-center space-x-4">
 
@@ -76,7 +68,7 @@ export const Header = () => {
           </div>
          </div>
         </div>
-        
+
       </div>
     </header>
   );

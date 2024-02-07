@@ -33,9 +33,10 @@ html {
 }
 
 #bug{
-    background-image: url('https://cdn1.myassignmenthelp.com/new-images/new-banners/home-page-new-banner.jpg') !important;
+    background-image: url('	https://cdn1.myassignmenthelp.com/new-images/india-country.jpg') !important;
     background-blend-mode:multiply ;
-    background-color: #a3a3a3;
+    background-color: #b4b4b4;
+    background-size: cover;
 }
 
 header, section, .dark-div {
