@@ -72,8 +72,8 @@ export const RowAHS = () => {
         },
       });
   
-      tl.from(title, { x: '100%', duration: 0.518, opacity: 0, ease: "sine.inOut" })
-      .from(lottie, { x: '-100%', duration: 0.518, opacity: 0, ease: "sine.inOut" });
+      tl.from(title, { x: '100%', duration: 0.818, opacity: 0, ease: "sine.inOut" })
+      .from(lottie, { x: '-100%', duration: 0.818, opacity: 0, ease: "sine.inOut" });
   
     }, []);
 

@@ -41,7 +41,7 @@ export const MovingTestimonials = () => {
             Still in Two Minds? The Proof is in Numbers!
                 </h2>
                 <h4 className='text-[0.8em] md:text-[1.5em]'>
-                    <strong>38983</strong> Genuine Reviews With a Rating of <strong>4.9/5</strong>.
+                    <strong className='text-[#ee8038]'>38983</strong> Genuine Reviews With a Rating of <strong className='text-[#ee8038]'>4.9/5</strong>.
                 </h4>
             </div>
             <div className="row-1-wrapper w-[100%]">

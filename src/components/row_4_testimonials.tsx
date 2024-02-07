@@ -32,7 +32,7 @@ export const Testimonials = () => {
     </div>
 
     <div className="row-1-wrapper w-[100%]">
-      <div className="row-1-cont no-sb flex gap-4 place-items-start">
+      <div className="row-1-cont custom-scrollbar flex gap-4 place-items-start pb-7">
       {rowfourdata.map((item, index) => (
             <div
               key={index}

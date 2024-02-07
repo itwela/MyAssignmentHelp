@@ -5,7 +5,7 @@ import darkModeIcon from '../assets/night-mode-dark.png'
 
 export const Footer =  () => {
   return (
-      <footer className="p-5 flex flex-col ">
+      <footer className="p-5 flex flex-col gap-3 ">
           <div className="flex  flex-col md:flex-row gap-9 w-[100%] justify-between ">
             
             <div className="flex gap-4 justify-around md:w-[50%]">
@@ -69,7 +69,7 @@ export const Footer =  () => {
   
          </div>
 
-         <div className="contact-nd-extras cursor-pointer  text-[0.6em] md:text-[1em] flex w-[100%] justify-around gap-4 pt-5">
+         <div className="contact-nd-extras cursor-pointer  text-[0.6em] md:text-[1em] flex w-[100%] justify-around gap- pt-5">
             <div className="flex flex-col gap-2">
                 <div className="pb-1 flex gap-2">
                 Contact us
@@ -124,7 +124,7 @@ export const Footer =  () => {
 
         </div>
 
-          <div className="terms cursor-pointer pt-6">
+          <div className="terms cursor-pointer pt-9">
             <ul className="flex text-[0.5em] md:text-[0.9em] w-[100%] justify-evenly">
               <li>
               <a href="">Term of use</a>

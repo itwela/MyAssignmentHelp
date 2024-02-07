@@ -27,3 +27,4 @@ After some great feedback, so far I have implimented these features:
 - Redesigned the row content (Mobile and Desktop Layout)
 - Implimented a Hover system to boost user experience. Made it easier to digest content by sorting content based on what youre hovering over.
 - Implimented Scroll based animations to content
+- added subtle artistic elements in the animated rows to boost user experience

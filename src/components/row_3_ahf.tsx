@@ -68,8 +68,8 @@ export const RowAHF = () => {
           },
         });
     
-        tl.from(title, { x: '-100%', duration: 0.518, opacity: 0, ease: "sine.inOut" })
-        .from(lottie, { x: '100%', duration: 0.518, opacity: 0, ease: "sine.inOut" });
+        tl.from(title, { x: '-100%', duration: 0.818, opacity: 0, ease: "sine.inOut" })
+        .from(lottie, { x: '100%', duration: 0.818, opacity: 0, ease: "sine.inOut" });
     
       }, []);
   
@@ -79,7 +79,6 @@ export const RowAHF = () => {
 
       {/* desktop version */}
       <div className="row-1-wrapper hidden w-[100%] relative md:h-[50vh] mt-[1em] mb-[3em] md:flex justify-evenly items-center">
-      <img src={bg} alt="" className="bg mix-blend-multiply absolute translate-y-[22em] z-[-1] opacity-[40%]" />
         <div ref={animateTitle} className="row-1-cont no-sb overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-start">
             {reorderedData.map((item, index) => (
               <div
@@ -133,6 +132,7 @@ export const RowAHF = () => {
         </div>
       </div>
       {/* end */}
+ 
 
       {/* mobile version */}
       <div className="row-1-wrapper w-[100%] h-[70vh] flex flex-col place-items-center mb-[3em] md:hidden">

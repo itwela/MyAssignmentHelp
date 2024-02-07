@@ -1,7 +1,7 @@
 import React, { MouseEvent, useState, useRef, useEffect } from 'react';
 import rowonedata from './row_1_data';
+import design from '../assets/design.jpg'
 import { DotLottiePlayer, Controls } from '@dotlottie/react-player';
-import bg from '../assets/design.jpg'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -87,8 +87,10 @@ export const RowOEA = () => {
 
     <div className="trig translate-y-[-5em] w-[100vw] h-[1vh] top-0 left-0" ref={triggerRef}></div>
       {/* desktop version */}
-      <div className="row-1-wrapper relative hidden w-[100%] md:h-[50vh] mb-[1em] md:flex justify-around items-center">
-      <img src={bg} alt="" className="bg mix-blend-multiply absolute translate-y-[-18em] z-[-1] opacity-[40%]" />
+
+      <div className="row-1-wrapper relative hidden w-[100%] md:h-[50vh] mb-[1em] md:flex justify-around items-center mt-[2em]">
+        
+        
         <div ref={animateTitle} className="row-1-cont no-sb overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-center">
             {reorderedData.map((item, index) => (
               <div
