@@ -10,14 +10,14 @@ export const Header = () => {
   const fadeTopOne = useRef<HTMLDivElement>(null); // Define the type of useRef
   const [selectedSection, setSelectedSection] = useState<string | null>(null); // Define the type of useState
 
-  useGSAP(() => {
-    gsap.from(fadeTopOne.current, {
-      y: -100, // Starting position (above the screen)
-      opacity: 0, // Starting opacity (completely transparent)
-      duration: 2.618, // Duration of the animation
-      ease: "sine.out", // Easing function for smoother animation
-    });
-  });
+  // useGSAP(() => {
+  //   gsap.from(fadeTopOne.current, {
+  //     y: -100, // Starting position (above the screen)
+  //     opacity: 0, // Starting opacity (completely transparent)
+  //     duration: 2.618, // Duration of the animation
+  //     ease: "sine.out", // Easing function for smoother animation
+  //   });
+  // });
 
   const handleSectionClick = (section: string) => {
     setSelectedSection(section === selectedSection ? null : section);
@@ -78,8 +78,8 @@ export const Header = () => {
   
 
   return (
-    <div ref={fadeTopOne} className="fixed pt-10 w-[100%] flex md:flex gap-5 items-center z-[2]">
-      <header ref={menuContainer} className="p-5 fixed w-[100%] flex md:flex gap-5 items-center z-[2]">
+    <div ref={menuContainer} className="fixed pt-10 w-[100%] flex md:flex gap-5 items-center z-[2]">
+      <header className="p-5 fixed w-[100%] flex md:flex gap-5 items-center z-[2]">
          <div className="flex justify-between w-[100%]">
           <div className="left-side flex gap-7 items-center">
             <a href="/" className="hidden md:flex text-[1.4em] text-[#ee8038] cursor-pointer">MyAssignmentHelp</a>
@@ -111,7 +111,7 @@ export const Header = () => {
             <div className="header-pic scale-[200%] top-[-27em] left-[38em] absolute w-[100%] h-[50%]"></div>
             <div className="p-5 pt-[4em] flex flex-col gap-[1em] md:gap-9 h-[100%]">
               {navigationSections.map((section: string, index: number) => (
-                <ul id="boxkid" key={index} className="nav-links  flex flex-col md:flex-row justify-start gap-[0.3em] md:gap-[7em] cursor-pointer" onClick={() => handleSectionClick(section)}>
+                <ul id="boxkid" key={index} className="nav-links  flex flex-col md:flex-row justify-start gap-[0.3em] md:gap-[7em] pb-2 cursor-pointer" onClick={() => handleSectionClick(section)}>
                   {section}
                   <div id="items" className="nav-items flex flex-col gap-[1em] md:gap-[2em] w-[85%] place-items-start">
                   {selectedSection === section && sectionData[section].map((item: string, idx: number) => (

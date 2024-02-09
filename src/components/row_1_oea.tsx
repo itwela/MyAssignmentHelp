@@ -1,13 +1,7 @@
 import React, { MouseEvent, useState, useRef, useEffect } from 'react';
 import rowonedata from './row_1_data';
 import { DotLottiePlayer, Controls } from '@dotlottie/react-player';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Marquee from 'react-fast-marquee';
 
-
-gsap.registerPlugin(ScrollTrigger);
 
 export const RowOEA = () => {
 
@@ -57,36 +51,13 @@ export const RowOEA = () => {
     // Reorder rowonedata based on activeIndex
     const reorderedData = reorderData(activeIndex);
   
-    // -----------------
-    
-    const animateTitle = useRef(null);
-    const animateLottie = useRef(null);
-    const triggerRef = useRef(null);
-    
-    useGSAP(() => {
-      const title = animateTitle.current;
-      const lottie = animateLottie.current;
-      const trigger = triggerRef.current;
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: trigger,
-          start: 'top center',
-          end: 'bottom 80%',
-          scrub: 1,
-        },
-      });
-  
-      tl.from(title, { x: '-100%', duration: 0.518, opacity: 0, ease: "sine.inOut" })
-      .from(lottie, { x: '100%', duration: 0.518, opacity: 0, ease: "sine.inOut" });
-  
-    }, []);
 
 
   return (
     <>
 
-    <div className="trig translate-y-[-8em] w-[100vw] h-[1vh] top-0 left-0" ref={triggerRef}></div>
+    <div className="trig translate-y-[-8em] w-[100vw] h-[1vh] top-0 left-0"></div>
       {/* desktop version */}
 
       <div className="row-1-wrapper relative hidden w-[100%] md:h-[50vh] mb-[1em] md:flex justify-around items-center mt-[2em]">
