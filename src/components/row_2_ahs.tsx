@@ -80,8 +80,8 @@ export const RowAHS = () => {
   return (
     <>
 
-    <div className="trig w-[100vw] h-[1vh] top-0 left-0" ref={triggerRef}></div>
 
+    <div className="trig w-[100vw] h-[1vh] top-0 left-0" ref={triggerRef}></div>
       {/* desktop version */}
       <div className="row-1-wrapper relative hidden w-[100%] md:h-[50vh] mt-[1em] mb-[1em] md:flex justify-around items-center">
       {/* <img src={bg} alt="" className="bg mix-blend-multiply absolute top-[-60%] opacity-[40%]" /> */}

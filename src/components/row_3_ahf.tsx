@@ -80,7 +80,7 @@ export const RowAHF = () => {
     <>
 
       {/* desktop version */}
-      <div className="row-1-wrapper hidden w-[100%] relative md:h-[50vh] mt-[1em] mb-[3em] md:flex justify-evenly items-center">
+      <div className="row-1-wrapper hidden w-[100%] relative md:h-[50vh] mt-[1em] mb-[3em] md:flex justify-evenly items-center z-3">
         <div ref={animateTitle} className="row-1-cont no-sb overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-start">
             {reorderedData.map((item, index) => (
               <div
