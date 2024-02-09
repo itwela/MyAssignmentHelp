@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -75,7 +76,7 @@ export const RowAHS = () => {
       tl.from(title, { x: '100%', duration: 0.818, opacity: 0, ease: "sine.inOut" })
       .from(lottie, { x: '-100%', duration: 0.818, opacity: 0, ease: "sine.inOut" });
   
-    }, []);
+    });
 
   return (
     <>
@@ -140,9 +141,9 @@ export const RowAHS = () => {
       {/* end */}
 
       {/* mobile version */}
-      <div className="mobile-trigger" ref={triggerRef}></div>
+      <div className="mobile-trigger"></div>
       <div className="row-1-wrapper w-[100%] flex flex-col place-items-center md:hidden">
-      <div ref={animateLottie} className="row-1-title-cont w-[70%] font-black">
+      <div className="row-1-title-cont w-[70%] font-black">
 
         <div className='animation-el'>
         <DotLottiePlayer
@@ -154,7 +155,7 @@ export const RowAHS = () => {
         </div>
       </div>
         
-        <div ref={animateTitle} className="row-1-cont translate-y-[-0.5em] no-sb overflow-y-hidden p-4 flex gap-4 place-items-center w-[70%]">
+        <div className="row-1-cont translate-y-[-0.5em] no-sb overflow-y-hidden p-4 flex gap-4 place-items-center w-[70%]">
             {reorderedData.map((item, index) => (
               <div
                 key={index}

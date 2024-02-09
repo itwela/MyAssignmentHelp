@@ -90,7 +90,7 @@ export const Header = () => {
               <span>___</span>
             </a>
             <a href="/"> <img src="https://cdn1.myassignmenthelp.com/seo-revamp-assets/logo-icon.svg" alt="" className="logo cursor-pointer md:hidden" /> </a>
-            </div>
+          </div>
           
           {/* Navigation Sections */}
             <nav className=" flex items-center space-x-4">
@@ -106,21 +106,22 @@ export const Header = () => {
             </nav>
           </div> 
 
-          <div id="box" className="menu-container header-div justify-evenly fixed top-[5.5em] rounded-[1.5em] ml-[0.7em] left-0 md:w-[50vw] w-full  z-10 p-5 flex flex-col gap-4 z-10">
+          <div id="box" className="menu-container header-div justify-evenly fixed top-[5.5em] pt-[3em] rounded-[1.5em] ml-[0.7em] left-0 md:w-[80vw] w-[90vw] h-[90vh] overflow-scroll no-sb p-3 z-10 p-5 flex place-content-center flex-col gap-4 z-10">
             {/* Content for the white div */}
-            <div className="p-5 flex flex-col gap-9 h-[100%]">
+            <div className="header-pic scale-[200%] top-[-27em] left-[38em] absolute w-[100%] h-[50%]"></div>
+            <div className="p-5 pt-[4em] flex flex-col gap-[1em] md:gap-9 h-[100%]">
               {navigationSections.map((section: string, index: number) => (
-                <ul id="boxkid" key={index} className="nav-links flex justify-start gap-[7em] cursor-pointer" onClick={() => handleSectionClick(section)}>
+                <ul id="boxkid" key={index} className="nav-links  flex flex-col md:flex-row justify-start gap-[0.3em] md:gap-[7em] cursor-pointer" onClick={() => handleSectionClick(section)}>
                   {section}
-                  <div id="items" className="nav-items flex flex-col gap-[2em] w-[85%] place-items-start">
+                  <div id="items" className="nav-items flex flex-col gap-[1em] md:gap-[2em] w-[85%] place-items-start">
                   {selectedSection === section && sectionData[section].map((item: string, idx: number) => (
-                        <li className="link-list cursor-pointer"  key={idx} dangerouslySetInnerHTML={{ __html: item }}></li>
+                        <li className="link-list cursor-pointer p-4 w-[100%] rounded-[0.5em]"  key={idx} dangerouslySetInnerHTML={{ __html: item }}></li>
                   ))}
                   </div>
                 </ul>
               ))}
             </div>
-            <div className="w-[100%] flex justify-between pl-2 pb-2 ">
+            <div className="w-[100%] flex justify-between pl-2 pb-[2em] ">
               <div className="close cursor-pointer hover:text-[#ee8038] p-4"  onClick={handleMenuClicked}>x</div>
             </div>
           </div>

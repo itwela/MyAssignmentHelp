@@ -73,14 +73,14 @@ export const RowAHF = () => {
         tl.from(title, { x: '-100%', duration: 0.818, opacity: 0, ease: "sine.inOut" })
         .from(lottie, { x: '100%', duration: 0.818, opacity: 0, ease: "sine.inOut" });
     
-      }, []);
+      });
   
 
   return (
     <>
 
       {/* desktop version */}
-      <div className="row-1-wrapper hidden w-[100%] relative md:h-[50vh] mt-[1em] mb-[3em] md:flex justify-evenly items-center z-3">
+      <div ref={triggerRef} className="row-1-wrapper hidden w-[100%] relative md:h-[50vh] mt-[1em] mb-[3em] md:flex justify-evenly items-center z-3">
         <div ref={animateTitle} className="row-1-cont no-sb overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-start">
             {reorderedData.map((item, index) => (
               <div
@@ -141,9 +141,9 @@ export const RowAHF = () => {
 
       {/* mobile version */}
 
-      <div className="mobile-trigger" ref={triggerRef}></div>
+      <div className="mobile-trigger"></div>
       <div className="row-1-wrapper relative w-[100%] flex flex-col place-items-center mb-[3em] md:hidden">
-      <div ref={animateLottie} className="row-1-title-cont w-[70%] font-black">
+      <div className="row-1-title-cont w-[70%] font-black">
 
         <div className='animation-el'>
         <DotLottiePlayer
@@ -155,7 +155,7 @@ export const RowAHF = () => {
         </div>
       </div>
         
-        <div ref={animateTitle} className="row-1-cont translate-y-[-0.5em] no-sb overflow-y-hidden p-4 flex place-items-center w-[70%]">
+        <div className="row-1-cont translate-y-[-0.5em] no-sb overflow-y-hidden p-4 flex place-items-center w-[70%]">
             {reorderedData.map((item, index) => (
               <div
                 key={index}

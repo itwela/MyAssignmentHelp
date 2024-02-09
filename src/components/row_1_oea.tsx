@@ -4,6 +4,8 @@ import { DotLottiePlayer, Controls } from '@dotlottie/react-player';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Marquee from 'react-fast-marquee';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -88,11 +90,12 @@ export const RowOEA = () => {
       {/* desktop version */}
 
       <div className="row-1-wrapper relative hidden w-[100%] md:h-[50vh] mb-[1em] md:flex justify-around items-center mt-[2em]">
-        <div>
-        <div id="art" className="absolute w-[100vw] min-h-screen top-[-39em] left-0 z-[-1]"></div>
-      </div> 
         
-        <div ref={animateTitle} className="row-1-cont no-sb overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-center">
+          <div>
+            <div id="art" className="absolute w-[100vw] min-h-screen top-[-39em] left-0 z-[-1]"></div>
+          </div> 
+        
+        <div className="row-1-cont no-sb overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-center">
             {reorderedData.map((item, index) => (
               <div
                 key={index}
@@ -134,7 +137,7 @@ export const RowOEA = () => {
 
         </div>
 
-        <div ref={animateLottie} className="row-1-title-cont w-[50%] font-black flex flex-col">
+        <div className="row-1-title-cont w-[50%] font-black flex flex-col">
 
       <div className='animation-el scale-[80%]'>
       <DotLottiePlayer
@@ -144,7 +147,7 @@ export const RowOEA = () => {
       >
       </DotLottiePlayer>
       </div>
-      </div>
+        </div>
       </div>
       {/* end */}
 

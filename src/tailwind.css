@@ -93,6 +93,19 @@ header {
     color: #fff;
 }
 
+ul {
+    padding: 0.7em;
+}
+
+li:hover{
+    background-color: #f5f7fa !important;
+}
+
+#boxkid:hover {
+    background-color: #fafafa !important;
+    transition: 1s ease;
+    border-radius: 0.5em;
+}
 
 .header-div {
     background: white;
@@ -122,6 +135,15 @@ header {
 
 .hamburger {
     background-image: url('./assets/hamburger.png');
+}
+
+.header-pic {
+    background-image: url('https://images.prismic.io/quizlet-web/1691009868783_10Teachers.png?auto=format,compress');
+    opacity: 20%;
+    border-radius: 60em;
+    background-size: contain;
+    background-color: #ee8038;
+    background-blend-mode:luminosity;
 }
 
 button, .form-button, .hire {
