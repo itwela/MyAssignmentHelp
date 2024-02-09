@@ -97,15 +97,12 @@ ul {
     padding: 0.7em;
 }
 
-li:hover{
-    background-color: #f5f7fa !important;
+.link-list:hover{
+    transform: translateY(9%);
+    transition: 0.3s ease;
 }
 
-#boxkid:hover {
-    background-color: #fafafa !important;
-    transition: 1s ease;
-    border-radius: 0.5em;
-}
+
 
 .header-div {
     background: white;
