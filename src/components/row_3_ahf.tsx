@@ -92,8 +92,8 @@ export const RowAHF = () => {
                 <div className="image-container w-[100%]  flex place-content-center place-items-center">
                 {/* <img src={item.image} alt={item.title} className='svg-icon w-[140px] p-4' /> */}
                 </div>
-                <p className='card-title font-black md:text-[1.5em] lg:text-[3em]'>{item.title} </p>
-                <div className="desc-container w-[100%] flex place-items-center overflow-scroll md:overflow-visible items-start place-content-center text-[0.7em] md:text-[1em]">
+                <p className='card-title font-black md:text-[1.3em] lg:text-[3em]'>{item.title} </p>
+                <div className="desc-container  flex place-items-center custom-scrollbar pr-3 overflow-y-scroll h-[9em] items-start place-content-center text-[1em]">
                 <p className=''>{item.description} </p>
                 </div>
 
@@ -121,7 +121,7 @@ export const RowAHF = () => {
               </div>
             ))}
         </div>
-        <div ref={animateLottie} className="row-1-title-cont w-[50%] font-black flex flex-col">
+        <div ref={animateLottie} className="row-1-title-cont w-[50%] font-black flex md:h-[50vh] place-content-center flex-col">
 
           <div className='animation-el scale-[80%]'>
           <DotLottiePlayer
@@ -132,6 +132,9 @@ export const RowAHF = () => {
         </DotLottiePlayer>
           </div>
         </div>
+        <div>
+        <div id="art" className="absolute w-[100vw] min-h-screen top-[15em] left-0 z-[-1]"></div>
+      </div> 
       </div>
       {/* end */}
  
@@ -139,7 +142,7 @@ export const RowAHF = () => {
       {/* mobile version */}
 
       <div className="mobile-trigger" ref={triggerRef}></div>
-      <div className="row-1-wrapper w-[100%] flex flex-col place-items-center mb-[3em] md:hidden">
+      <div className="row-1-wrapper relative w-[100%] flex flex-col place-items-center mb-[3em] md:hidden">
       <div ref={animateLottie} className="row-1-title-cont w-[70%] font-black">
 
         <div className='animation-el'>
@@ -161,7 +164,7 @@ export const RowAHF = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <p className='card-title font-black md:text-[1.5em] lg:text-[3em]'>{item.title} </p>
-                <div className="desc-container overflow-hidden w-[100%] flex place-items-center place-content-center text-[0.7em]">
+                <div className="desc-container w-[100%] flex place-items-center custom-scrollbar pr-2 pl-2 overflow-y-scroll h-[14em] items-start place-content-center text-[1em]">
                 <p className=''>{item.description} </p>
                 </div>
 
@@ -188,6 +191,7 @@ export const RowAHF = () => {
               </div>
             ))}
         </div>
+        <div id="art" className="absolute w-[100vw] min-h-screen top-[33em] left-0 z-[-1]"></div>
       </div>
       {/* end */}
 

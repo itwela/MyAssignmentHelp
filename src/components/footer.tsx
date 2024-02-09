@@ -5,7 +5,7 @@ import darkModeIcon from '../assets/night-mode-dark.png'
 
 export const Footer =  () => {
   return (
-      <footer className="p-5 flex flex-col gap-3">
+      <footer className="p-5 relative flex flex-col gap-3 overflow-hidden">
           <div className="flex  flex-col md:flex-row gap-9 w-[100%] justify-between ">
             
             <div className="flex gap-4 justify-around md:w-[50%]">
@@ -143,7 +143,9 @@ export const Footer =  () => {
             </ul>
           </div>
 
-  
+          <div>
+            <div id="art" className="absolute w-[100vw] min-h-screen bottom-[-35em] left-0 z-[-1]"></div>
+          </div> 
       </footer>
   );
 };

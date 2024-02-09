@@ -25,13 +25,13 @@ export const Testimonials = () => {
     <>
         <div id="the-form"></div>
 
-    <div className="row-1-title-cont w-[100%] font-black">
-      <h2 className='row-1-title text-[1em] md:text-[1.3em]'>
+    <div className="row-1-title-cont p-4 w-[100%] font-black">
+      <h2 className='row-1-title text-[1em] md:text-[1.3em] lg:text-[3em]'>
       MyAssignmentHelp Testimonials      
       </h2>
     </div>
 
-    <div className="row-1-wrapper w-[100%]">
+    <div className="row-1-wrapper w-[100%] p-4">
       <div className="row-1-cont custom-scrollbar flex gap-4 place-items-start pb-7">
       {rowfourdata.map((item, index) => (
             <div

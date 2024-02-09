@@ -27,5 +27,8 @@ After some great feedback, so far I have implimented these features:
 - Redesigned the row content (Mobile and Desktop Layout)
 - Implimented a Hover system to boost user experience. Made it easier to digest content by sorting content based on what youre hovering over.
 - Implimented Scroll based animations to content
-- Simplified header with expansions to boost user navigation experience
 - Polished mobile layout
+
+- Added colorful art elements to the background that respond to light and darkmode
+- Built out an animating navigation menu
+- Improved and simplified initial Header Layout

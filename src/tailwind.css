@@ -13,14 +13,14 @@
 
 .custom-scrollbar::-webkit-scrollbar {
     scroll-behavior: smooth;
-    width: 1px; /* Width of the scrollbar */
-    height: 9px; /* Width of the scrollbar */
+    width: 7px; /* Width of the scrollbar */
+    height: 6px; /* Width of the scrollbar */
     cursor: pointer;
     background-color: transparent; /* Background color of the scrollbar track */
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #888; /* Color of the scrollbar thumb */
+    background-color: #b1b1b1; /* Color of the scrollbar thumb */
     border-radius: 5px; /* Border radius of the scrollbar thumb */
 }
 
@@ -32,6 +32,18 @@ html {
     overflow-x: hidden;
 }
 
+.dark-mode-html {
+    background-color: #0a082a;
+    color: white;
+}
+
+.dark-mode-html #art{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    opacity: 10%;
+}
+
+
 #bug{
     background-image: url('	https://cdn1.myassignmenthelp.com/new-images/india-country.jpg') !important;
     background-blend-mode:multiply ;
@@ -39,8 +51,18 @@ html {
     background-size: cover;
 }
 
-header, section, .dark-div {
+#art{
+    background-image: url('./assets/design.png') !important;
+    background-size: cover;
+    opacity: 70%;
+}
+
+ section, .dark-div {
     background-color: #fff;
+}
+
+header {
+    background-color: #f5f7fa;
 }
 
 .row-1-cont{
@@ -51,7 +73,7 @@ header, section, .dark-div {
     color: #fff;
 }
 
-.dark-mode-header, .dark-mode-body, .dark-mode-footer {
+.dark-mode-header, .dark-mode-footer {
     background-color: #0a082a;
     color: white;
 }
@@ -62,15 +84,18 @@ header, section, .dark-div {
     transition: 0.618s ease-in-out;
 }
 
+.link-list {
+    text-align: left !important;
+}
+
 .dark-mode-header-div {
     background-color: #303754 !important;
     color: #fff;
-    transition: 0.618s ease-in-out;
 }
+
 
 .header-div {
     background: white;
-    transition: 0.618s ease-in-out;
 }
 
 .dark-div:hover {
@@ -83,7 +108,8 @@ header, section, .dark-div {
     color: #ee8038;
 }
 
-.menu-container {
+
+/* .menu-container {
     transform: translateY(-200%);
     opacity: 0;
 }
@@ -92,7 +118,7 @@ header, section, .dark-div {
     opacity: 100;
     transition: 0.618s ease-in;
     transform: translateY(0%);
-}
+} */
 
 .hamburger {
     background-image: url('./assets/hamburger.png');

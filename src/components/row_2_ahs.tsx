@@ -85,7 +85,7 @@ export const RowAHS = () => {
       {/* desktop version */}
       <div className="row-1-wrapper relative hidden w-[100%] md:h-[50vh] mt-[1em] mb-[1em] md:flex justify-around items-center">
       {/* <img src={bg} alt="" className="bg mix-blend-multiply absolute top-[-60%] opacity-[40%]" /> */}
-      <div ref={animateLottie} className="row-1-title-cont w-[50%] font-black flex flex-col">
+      <div ref={animateLottie} className="row-1-title-cont w-[50%] font-black flex flex-col ">
 
           <div className='animation-el scale-[80%]'>
           <DotLottiePlayer
@@ -104,8 +104,8 @@ export const RowAHS = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                <p className='card-title font-black md:text-[1.5em] lg:text-[3em]'>{item.title} </p>
-                <div className="desc-container w-[100%] flex place-items-center overflow-scroll md:overflow-visible items-start place-content-center text-[1em] ">
+                <p className='card-title font-black md:text-[1.3em] lg:text-[3em]'>{item.title} </p>
+                <div className="desc-container  flex place-items-center custom-scrollbar pr-3 overflow-y-scroll h-[12em] items-start place-content-center text-[1em] ">
                     <p className=''>{item.description} </p>
                 </div>
 
@@ -163,7 +163,7 @@ export const RowAHS = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <p className='card-title font-black md:text-[1.5em] lg:text-[3em] '>{item.title} </p>
-                <div className="desc-container overflow-hidden w-[100%] flex place-items-center place-content-center text-[0.7em]">
+                <div className="desc-container w-[100%] flex place-items-center custom-scrollbar pl-3 pr-3 overflow-y-scroll h-[12em] items-start place-content-center text-[1em]">
                 <p className=''>{item.description} </p>
                 </div>
 

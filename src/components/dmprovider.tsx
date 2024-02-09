@@ -22,8 +22,7 @@ const DarkMode: React.FC = () => {
   // Use useEffect to toggle classes based on the updated state
   useEffect(() => {
     // Toggle classes on HTML body
-    document.body.classList.toggle('dark-mode-body', isDarkMode);
-    // Toggle classes on header if it exists
+    (document as any).documentElement.classList.toggle('dark-mode-html', isDarkMode);    // Toggle classes on header if it exists
     const header = document.querySelector('header');
     if (header) {
       header.classList.toggle('dark-mode-header', isDarkMode);

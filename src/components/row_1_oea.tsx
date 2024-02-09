@@ -1,6 +1,5 @@
 import React, { MouseEvent, useState, useRef, useEffect } from 'react';
 import rowonedata from './row_1_data';
-import design from '../assets/design.jpg'
 import { DotLottiePlayer, Controls } from '@dotlottie/react-player';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -89,7 +88,9 @@ export const RowOEA = () => {
       {/* desktop version */}
 
       <div className="row-1-wrapper relative hidden w-[100%] md:h-[50vh] mb-[1em] md:flex justify-around items-center mt-[2em]">
-        
+        <div>
+        <div id="art" className="absolute w-[100vw] min-h-screen top-[-39em] left-0 z-[-1]"></div>
+      </div> 
         
         <div ref={animateTitle} className="row-1-cont no-sb overflow-y-hidden p-4 flex md:w-[40%] gap-4 place-items-center">
             {reorderedData.map((item, index) => (
@@ -99,8 +100,8 @@ export const RowOEA = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                <p id='title' className='card-title font-black md:text-[1.5em] lg:text-[3em]'>{item.title} </p>
-                <div className="desc-container w-[100%] flex place-items-center overflow-scroll md:overflow-visible items-start place-content-center text-[1em] ">
+                <p id='title' className='card-title font-black md:text-[1.3em] lg:text-[3em]'>{item.title} </p>
+                <div className="desc-container w-[100%] flex place-items-center custom-scrollbar pr-3 overflow-y-scroll h-[6em] items-start place-content-center text-[1em] ">
                     <p id='description' className=''>{item.description} </p>
                 </div>
 
@@ -148,7 +149,10 @@ export const RowOEA = () => {
       {/* end */}
 
       {/* mobile version */}
-      <div className="row-1-wrapper w-[100%] h-[70vh] flex flex-col place-items-center md:hidden">
+      <div className="row-1-wrapper relative w-[100%] h-[70vh] flex flex-col place-items-center md:hidden">
+      <div>
+        <div id="art" className="absolute w-[100vw] min-h-screen top-[-39em] left-0 z-[-1]"></div>
+      </div> 
       <div className="row-1-title-cont w-[70%] font-black">
 
         <div className='animation-el'>
@@ -170,7 +174,7 @@ export const RowOEA = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <p className='card-title font-black md:text-[1.5em] lg:text-[3em] translate-y-[1em]'>{item.title} </p>
-                <div className="desc-container overflow-hidden w-[100%] flex place-items-center place-content-center text-[0.7em]">
+                <div className="desc-container w-[100%] flex place-items-center custom-scrollbar pr-2 pl-2 overflow-y-scroll h-[6em] items-start place-content-center text-[1em]">
                 <p className=''>{item.description} </p>
                 </div>
 
