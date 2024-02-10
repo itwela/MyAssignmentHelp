@@ -11,6 +11,7 @@ import { useRef, useEffect, useLayoutEffect } from 'react';
 import gsap from "gsap";
 import { MovingTestimonials } from "./components/row_5_movingReviews";
 import DarkMode from "./components/dmprovider";
+import { useGSAP } from "@gsap/react";
 
 function App() {
 
@@ -40,7 +41,7 @@ function App() {
   
   // initial intro animation
   const toplayer = useRef(null);
-  useLayoutEffect(() => {
+  useGSAP(() => {
     let ctx = gsap.context(() => {
       const t1 = gsap.timeline()
       t1.from("#intro-slide", {
@@ -74,7 +75,6 @@ function App() {
       })
     }, toplayer)
 
-    return () => ctx.revert()
   }, [])
 
   return (

@@ -1,13 +1,11 @@
 import gsap from "gsap";
-import DarkMode from "./dmprovider";
 import { useGSAP } from "@gsap/react"; 
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import navigationSections from './headerLinks'; // Importing the navigation sections array
 import sectionData from './headerData'; // Import section data
 
 export const Header = () => {
   
-  const fadeTopOne = useRef<HTMLDivElement>(null); // Define the type of useRef
   const [selectedSection, setSelectedSection] = useState<string | null>(null); // Define the type of useState
 
   // useGSAP(() => {
@@ -35,43 +33,49 @@ export const Header = () => {
     setIsItemsClicked(!isItemsCLicked)
   }
 
+  useEffect (() => {
+    gsap.set("#box", {
+      yPercent: "-200",
+      delay: 1.8,
+    });
+  }, [])
+
   useGSAP(() => {
-      if (isOpen) {
+      if (isOpen != false) {
           gsap.to(["#box", "#boxkid"], {
-          yPercent: -20,
+          yPercent: "-20",
           duration: 1.3,
           delay: 0.3,
           stagger: 0.216,
           ease: "back",
           opacity: 0,
-        }),
+        })
+        
           gsap.to(["#box", "#boxkid"], {
-          yPercent: 0,
+          yPercent: "0",
           duration: 1.3,
           delay: 0.3,
           stagger: 0.216,
           ease: "back",
           opacity: 100,
-        }),
-        console.log(isOpen)
+        })
       }
-      if (!isOpen) {
-        gsap.from(["#boxkid"], {
-          yPercent: 200,
+      if (isOpen != true) {
+        gsap.to("#boxkid", {
+          yPercent: "200",
           duration: 1.3,
           delay: 0.3,
           stagger: 0.216,
           ease: "back",
-        }),
+        })
         
-        gsap.to(["#box"], {
-          yPercent: -200,
+        gsap.to("#box", {
+          yPercent: "-200",
           duration: 3.3,
           delay: 1.8,
           stagger: 0.216,
           ease:"elastic.out",
         });
-        console.log(isOpen)
     }
   }, {dependencies: [isOpen, setIsOpen], scope: menuContainer})
 
