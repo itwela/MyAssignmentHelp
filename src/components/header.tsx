@@ -44,7 +44,7 @@ export const Header = () => {
       if (isOpen != false) {
           gsap.to(["#box", "#boxkid"], {
           yPercent: "-20",
-          duration: 1.3,
+          // duration: 1.3,
           delay: 0.3,
           stagger: 0.216,
           ease: "back",
@@ -53,7 +53,7 @@ export const Header = () => {
         
           gsap.to(["#box", "#boxkid"], {
           yPercent: "0",
-          duration: 1.3,
+          // duration: 1.3,
           delay: 0.3,
           stagger: 0.216,
           ease: "back",
@@ -63,7 +63,7 @@ export const Header = () => {
       if (isOpen != true) {
         gsap.to("#boxkid", {
           yPercent: "200",
-          duration: 1.3,
+          // duration: 1.3,
           delay: 0.3,
           stagger: 0.216,
           ease: "back",
@@ -71,7 +71,7 @@ export const Header = () => {
         
         gsap.to("#box", {
           yPercent: "-200",
-          duration: 3.3,
+          // duration: 3.3,
           delay: 1.8,
           stagger: 0.216,
           ease:"elastic.out",
