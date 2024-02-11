@@ -112,7 +112,7 @@ export const Header = () => {
 
           <div id="box" className="menu-container header-div justify-evenly fixed top-[5.5em] pt-[3em] rounded-[1.5em] ml-[0.7em] left-0 md:w-[80vw] w-[90vw] h-[90vh] overflow-scroll no-sb p-3 z-10 p-5 flex place-content-center flex-col gap-4 z-10">
             {/* Content for the white div */}
-            <div className="header-pic scale-[200%] top-[-27em] left-[38em] absolute w-[100%] h-[50%]"></div>
+            <div className="header-pic scale-[200%] top-[-27em] left-[48em] absolute w-[100%] h-[50%]"></div>
             <div className="p-5 pt-[4em] flex flex-col gap-[1em] md:gap-9 h-[100%]">
               {navigationSections.map((section: string, index: number) => (
                 <ul id="boxkid" key={index} className="nav-links  flex flex-col md:flex-row justify-start gap-[0.3em] md:gap-[7em] pb-2 cursor-pointer" onClick={() => handleSectionClick(section)}>
